@@ -1,2 +1,1 @@
-# rdtrammel
-Repo for working on CIT160 coursework
+# Repo for CIT 160 Coursework at BYUi
