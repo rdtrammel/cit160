@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300');
 
-body, h1, h2, p{
+body, header, h1, h2, p{
     margin:0;
     padding:0;
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
@@ -23,15 +23,18 @@ header video{
 .header-content{
     position:relative;
     background:rgba(255,255,255,.9);
-    margin: 10px auto;
-    padding:15px;
-    max-width: 90%;
+    left:0;
+    margin:auto;
+    padding:20px;
+    line-height: 1.5;
+    min-width: 100%;
 }
 
 .profile-container{
-    position:relative;
-    border-radius:50%;
-    float:right;
+    position: absolute;
+    border-radius:2em;
+    top:10%;
+    right:5%;
     height:100px;
     width:100px;
     overflow:hidden;
