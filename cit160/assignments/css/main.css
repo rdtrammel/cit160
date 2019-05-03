@@ -9,7 +9,7 @@ body, header, h1, h2, p{
 header{
     position:relative;
     width: 100%;
-    height:700px;
+    height:120px;
 }
 
 header video{
@@ -22,7 +22,7 @@ header video{
 
 .header-content{
     position:relative;
-    background:rgba(255,255,255,.9);
+    background:rgba(255,255,255,.7);
     left:0;
     margin:auto;
     padding:20px;
@@ -32,9 +32,9 @@ header video{
 
 .profile-container{
     position: absolute;
-    border-radius:2em;
+    border-radius:3px;
     top:10%;
-    right:5%;
+    right:6%;
     height:100px;
     width:100px;
     overflow:hidden;
@@ -45,3 +45,70 @@ header video{
     height: 100%;
 }
 
+.assignment-content{
+    padding:1em;
+    max-width:900px;
+    margin:auto;
+}
+
+.assignment-content h1{
+    font-size:20pt;
+    padding:1em;
+}
+
+.week{
+    background-color:#FFF;
+    width:100%;
+}
+
+.week h2{
+    box-shadow: 0 0 10px 0px rgb(86, 57, 212);
+    border-radius: 1em;
+    padding:1.5em;
+    font-size:16pt;
+}
+
+.week li {
+    list-style-type:none;
+    padding: 1em;
+}
+
+.week li a{
+    width:100%;
+    text-decoration: none;
+}
+
+.week li a:hover{
+    cursor:pointer;
+    color:purple;
+}
+
+footer{
+    position:relative;
+    height:800px;
+}
+.image-container {
+    position:relative;
+    background: url("../assets/dc-temple.jpg") no-repeat center;
+    background-size: cover;
+    height:100%;
+}
+
+footer h2{
+    text-align:center;
+    display:inline-block;
+    padding: 1em;
+    position:absolute;
+    color:#fff;
+    width:100%;
+    z-index:1;
+}
+
+footer h2 a{
+    color: #fff;
+}
+
+footer h2 a:hover{
+    color:purple;
+    cursor:pointer;
+}
