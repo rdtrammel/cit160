@@ -21,8 +21,9 @@ header video{
 }
 
 .header-content{
+    border-bottom:1px solid lightseagreen;
+    color:#000;
     position:relative;
-    background:rgba(255,255,255,.7);
     left:0;
     margin:auto;
     padding:20px;
@@ -56,37 +57,6 @@ header video{
     padding:1em;
 }
 
-.week{
-    background-color:#FFF;
-    width:100%;
-}
-
-.week h2{
-    box-shadow: 0 0 10px 0px rgb(86, 57, 212);
-    border-radius: 1em;
-    padding:1.5em;
-    font-size:16pt;
-}
-
-.week li {
-    list-style-type:none;
-    padding: 1em;
-}
-
-.week li a{
-    width:100%;
-    text-decoration: none;
-}
-
-.week li a:hover{
-    cursor:pointer;
-    color:purple;
-}
-
-footer{
-    position:relative;
-    height:800px;
-}
 .image-container {
     position:relative;
     background: url("../assets/dc-temple.jpg") no-repeat center;
@@ -94,18 +64,56 @@ footer{
     height:100%;
 }
 
+.week{
+    border-radius:15px;
+    width:100%;
+}
+
+.week h2{
+    background-color:rgba(255,255,255,.7);
+    box-shadow: 0 0 5px 0px lightseagreen;
+    border-radius: 1em;
+    padding:1.5em;
+    font-size:16pt;
+}
+
+.week li {
+    margin-bottom:3px;
+    list-style-type:none;
+    padding: 1em;
+}
+
+.week li a{
+    width:100%;
+    text-decoration: none;
+    color:navy;
+}
+
+.week li a:hover{
+    cursor:pointer;
+    color:white;
+}
+
+footer{
+    position:relative;
+    background-color: rgba(0,0,0,.2);
+    height:500px;
+}
+
 footer h2{
+    margin-top:50px;
+    background-color:rgba(255,255,255,.7);
     text-align:center;
     display:inline-block;
     padding: 1em;
     position:absolute;
-    color:#fff;
+    color:#000;
     width:100%;
     z-index:1;
 }
 
 footer h2 a{
-    color: #fff;
+    color: #999;
 }
 
 footer h2 a:hover{
