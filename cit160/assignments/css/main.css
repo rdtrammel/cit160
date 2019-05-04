@@ -57,7 +57,7 @@ header video{
     padding:1em;
 }
 
-.image-container {
+.temple-image {
     position:relative;
     background: url("../assets/dc-temple.jpg") no-repeat center;
     background-size: cover;
