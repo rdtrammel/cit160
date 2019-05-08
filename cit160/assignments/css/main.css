@@ -7,7 +7,6 @@ body, header, h1, h2, p{
 }
 
 header{
-    position:relative;
     width: 100%;
     height:120px;
 }
@@ -20,22 +19,25 @@ header video{
     min-height: 100%;
 }
 
+.main-content{
+    max-width:800px;
+    margin:auto;
+}
+
 .header-content{
     border-bottom:1px solid lightseagreen;
     color:#000;
     position:relative;
-    left:0;
     margin:auto;
     padding:20px;
     line-height: 1.5;
-    min-width: 100%;
 }
 
 .profile-container{
     position: absolute;
     border-radius:3px;
     top:10%;
-    right:6%;
+    right:5px;
     height:100px;
     width:100px;
     overflow:hidden;
