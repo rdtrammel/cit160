@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="This is a program for formatting a user inputted address as part of week 4 of my CIT 160 coursework at BYUi">
+        <title>Week 4 - Address Formatter</title>
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        <header>
+            <h1>Week 4: Address Formatter</h1>
+            <h2>Robert Trammel</h2>
+        </header>
+        <main>
+            <h3>Address Formatter</h3>
+            <label>City: <input type="text" id="city"></label>
+            <label>State: <input type="text" id="state"></label>
+            <label>Zip Code: <input type="text" id="zip"></label>
+            <label><button onclick="displayAddress()">Show Address</button></label>
+            <hr>
+            <p>Final Output: <span id="output"></span></p>
+        </main>
+        <footer>
+            &copy;2019 &bull; Robert Trammel &bull; BYU-Idaho &bull; CIT 160 &bull; <span id="currentdate"></span>
+        </footer>
+        <script src="./js/main.js"></script>
+    </body>
+</html>
