@@ -59,11 +59,25 @@ header video{
     padding:1em;
 }
 
-.temple-image {
+/*.temple-image {
     position:relative;
     background: url("../assets/dc-temple.jpg") no-repeat center;
     background-size: cover;
     height:100%;
+}*/
+
+.temple{
+    overflow:hidden;
+}
+
+.temple img{
+    position:relative;
+    height:100%;
+}
+
+.temple p{
+    padding:2em;
+    text-align:center;
 }
 
 .week{
@@ -101,7 +115,6 @@ footer{
     background-color: rgba(0,0,0,.2);
     height:500px;
 }
-
 footer h2{
     margin-top:50px;
     background-color:rgba(255,255,255,.7);
