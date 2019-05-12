@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Week 4 - Personalized Scripture</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="This is a program for outputting a personalized scripture as part of week 4 of my CIT 160 coursework at BYUi">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+        <header>
+            <h1>Week 4: Personalized Scripture</h1>
+            <h2>Robert Trammel</h2>
+        </header>
+        <main>
+            <h3>Scripture Personalization</h3>
+            <label>What is your name? <input type="text" id="name"></label>
+            <label><button onclick="getScripture()">Get your scripture</button></label>
+            <hr>
+            <p><span id="output"></span></p>
+        </main>
+        <footer>
+            &copy;2019 &bull; Robert Trammel &bull; BYU-Idaho &bull; CIT 160 &bull; <span id="currentdate"></span>
+        </footer>
+        <script src="./js/main.js"></script>
+    </body>
+</html>
