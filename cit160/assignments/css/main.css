@@ -94,20 +94,25 @@ header video{
 }
 
 .week li {
+    border-radius:1em;
     margin-bottom:3px;
     list-style-type:none;
-    padding: 1em;
+    padding:1.5em;
+    
 }
 
 .week li a{
+    font-size:16pt;
     width:100%;
     text-decoration: none;
     color:navy;
+    padding: 1.5em;
 }
 
 .week li a:hover{
+    background-color: #F7F7F7;
     cursor:pointer;
-    color:black;
+    color:seagreen;
 }
 
 footer{
