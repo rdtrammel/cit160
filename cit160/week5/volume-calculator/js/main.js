@@ -15,6 +15,6 @@ function getVolume(){
 	}else{
 		//Volume of cylander is: V=pi*r^2*h
 		//Conversion of inches to liters is approximately 61.024 per google
-		output.innerHTML = "Volume ≈ " + (Math.PI * Math.pow(radius.value, 2) * height.value)/61.024;
+		output.innerHTML = "Volume<i>(in liters)</i> ≈ " + (Math.PI * Math.pow(radius.value, 2) * height.value)/61.024;
 	}
 }
