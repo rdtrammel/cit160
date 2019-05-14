@@ -1,27 +1,62 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300');
 
 body, header, h1, h2, p{
+    display:block;
     margin:0;
     padding:0;
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    transition: all .3s;
 }
 
 header{
+    background-color:rgba(255,255,255,.95);
+    position:relative;
     border-bottom:1px solid lightseagreen;
     height:120px;
+    transition: all .3s;
 }
 
-header video{
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    min-width: 100%; 
-    min-height: 100%;
+
+.sticky{
+    height:80px;
+    width:100%;
+    transition:all .3s;
+    position:fixed;
+    top:0;
+    z-index:2;
+    cursor:pointer;
+}
+
+.sticky h1, .sticky h2{
+    position:relative;
+    top: -5px;
+    display:block;
+    margin:0;
+    padding:0 .2em 0em .2em;
+    font-size:16pt;
+    transition: all .3s;
+}
+
+.sticky .profile-container{
+    top: 10px;
+    height:65px;
+    transition: all .3s;
+}
+
+.sticky .main-content{
+    margin-top:70px;
 }
 
 .main-content{
     max-width:800px;
     margin:auto;
+    transition: all .3s;
+}
+
+.augment-top{
+    position:relative;
+    margin-top: 110px;
+    transition: all .3s;
 }
 
 .header-content{
@@ -41,6 +76,7 @@ header video{
     height:100px;
     width:100px;
     overflow:hidden;
+    transition: height .3s;
 }
 
 .profile-container img{
