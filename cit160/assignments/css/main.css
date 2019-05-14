@@ -59,18 +59,22 @@ header video{
     padding:1em;
 }
 
-.temple{
-    overflow:hidden;
+.github-link{
+    padding:0;
+    margin:0;
+    vertical-align:middle;
 }
 
-.temple img{
-    position:relative;
-    height:100%;
+.github-link span{
+    position: relative;
+    top: -8px;
+    margin:0;
+    height:30px;
 }
-
-.temple p{
-    padding:2em;
-    text-align:center;
+.github-link img{
+    padding:0;
+    margin:0;
+    width: 30px;
 }
 
 .week{
@@ -111,7 +115,10 @@ header video{
 footer{
     position:relative;
     background-color: rgba(0,0,0,.2);
-    height:500px;
+    max-height:700px;
+    max-width:1000px;
+    overflow:hidden;
+    margin:auto;
 }
 footer h2{
     margin-top:50px;
@@ -132,4 +139,32 @@ footer h2 a{
 footer h2 a:hover{
     color:purple;
     cursor:pointer;
+}
+
+.temple{
+    margin:0;
+    padding:0;
+    height:0;
+    position:relative;
+    max-width:1000px;
+}
+
+.temple img{
+    position:relative;
+    object-fit: cover;
+    align-content:center;
+    width:100%;
+}
+
+.temple-label{
+    display:inline;
+    position:relative;
+    top: -3em;
+    left: 34%;
+    right: 33%;
+    background-color:rgba(255,255,255,.9);
+    margin:auto;
+    padding:.5em 2em;
+    text-align:center;
+    z-index:1;
 }
