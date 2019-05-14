@@ -59,13 +59,6 @@ header video{
     padding:1em;
 }
 
-/*.temple-image {
-    position:relative;
-    background: url("../assets/dc-temple.jpg") no-repeat center;
-    background-size: cover;
-    height:100%;
-}*/
-
 .temple{
     overflow:hidden;
 }
