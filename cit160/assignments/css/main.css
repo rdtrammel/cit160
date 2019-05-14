@@ -7,7 +7,7 @@ body, header, h1, h2, p{
 }
 
 header{
-    width: 100%;
+    border-bottom:1px solid lightseagreen;
     height:120px;
 }
 
@@ -25,10 +25,10 @@ header video{
 }
 
 .header-content{
-    border-bottom:1px solid lightseagreen;
     color:#000;
     position:relative;
     margin:auto;
+    max-width:900px;
     padding:20px;
     line-height: 1.5;
 }
