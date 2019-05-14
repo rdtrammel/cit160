@@ -11,11 +11,13 @@ let mainContent = document.querySelector(".main-content");
 window.addEventListener('scroll', ()=>{ 
     if (this.scrollY > 15){
         header.addEventListener("click", returnToTop, true);
+        header.addEventListenet("touchend", returnToTop, true);
         header.classList.add("sticky");
         mainContent.classList.add("augment-top");
     } else {
         header.classList.remove("sticky");
         mainContent.classList.remove("augment-top");
         header.removeEventListener("click", returnToTop, true);
+        header.removeEventListener("touchend", returnToTop, true);
     }
 });
