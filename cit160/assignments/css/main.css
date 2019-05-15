@@ -151,7 +151,7 @@ header{
 footer{
     position:relative;
     background-color: rgba(0,0,0,.2);
-    max-height:700px;
+    max-height:625px;
     max-width:1000px;
     overflow:hidden;
     margin:auto;
@@ -177,6 +177,10 @@ footer h2 a:hover{
     cursor:pointer;
 }
 
+.small-text{
+    font-size:12pt;
+}
+
 .temple{
     margin:0;
     padding:0;
@@ -193,14 +197,12 @@ footer h2 a:hover{
 }
 
 .temple-label{
-    display:inline;
     position:relative;
     top: -3em;
-    left: 34%;
-    right: 33%;
     background-color:rgba(255,255,255,.9);
     margin:auto;
     padding:.5em 2em;
+    max-width: 200px;
     text-align:center;
     z-index:1;
 }
