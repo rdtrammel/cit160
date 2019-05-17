@@ -11,10 +11,15 @@ window.addEventListener('scroll', ()=>{ setHeightListeners(); setWidthListeners(
 window.addEventListener('resize', ()=>{ setWidthListeners();});
 
 //Functions
+//This will scroll the window to the top
 function returnToTop(){
     window.scroll({ top:0, behavior: "smooth" })
 }
 
+//I couldn't figure out media queries, they didn't seem to be working the way they are explained on so many websites, so I added these listeners for height and width.
+
+//This one applies a sticky class to the header when you start scrolling down
+//I noticed that I had also had to augment the top of the body content because it would jump up underneath the header once it went 'sticky'.
 function setHeightListeners(){
     if (this.scrollY > 15){
         header.addEventListener("click", returnToTop, true);
@@ -29,12 +34,11 @@ function setHeightListeners(){
     }
 }
 
+//When the body got smaller in width than a certain area, I noticed that the text looked horrible on mobile, so I wanted to toggle a class when those things changed.
 function setWidthListeners(){
     if (window.innerWidth < 600){
         footerLabel.classList.add("small-text");
-        header.classList.add("small-text")
     } else {
         footerLabel.classList.remove("small-text");
-        header.classList.remove("small-text")
     }
 }

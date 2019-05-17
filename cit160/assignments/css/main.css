@@ -192,6 +192,7 @@ footer h2 a:hover{
 .temple img{
     position:relative;
     object-fit: cover;
+    object-position: 120%;
     align-content:center;
     width:100%;
 }
