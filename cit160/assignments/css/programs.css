@@ -97,9 +97,9 @@ table h4{
 }
 
 button{
+    border:0px;
     background-color: lightseagreen;
     color:#FFF;
-    border: 2px solid lightseagreen;
     border-radius:.5em;
     font-size:14pt;
     padding:.5em;
@@ -109,6 +109,5 @@ button{
 
 button:hover{
     cursor:pointer;
-    background-color: rgb(195, 252, 249);
-    color: lightseagreen;
+    background-color: rgb(95, 252, 226);
 }
