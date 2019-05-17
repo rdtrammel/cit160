@@ -40,7 +40,7 @@ main {
     border-radius:1em;
 	padding: 10px;
     max-width: 500px;
-    background-color:#FFF;
+    background-color:#F0F0F0;
 }
 
 main:before, main:after{
@@ -98,16 +98,16 @@ table h4{
 
 button{
     border:0px;
-    background-color: lightseagreen;
+    background-color: rgb(13, 128, 122);
     color:#FFF;
     border-radius:.5em;
     font-size:14pt;
     padding:.5em;
-    margin-bottom:20px;
     transition:background-color .2s;
 }
 
 button:hover{
     cursor:pointer;
-    background-color: rgb(95, 252, 226);
+    background-color: lightseagreen;
+    color:rgb(10, 92, 88);
 }
