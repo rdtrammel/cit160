@@ -29,6 +29,6 @@ function calculateTotalPay(){
 	if (hours.value<=0 || wage.value<=0) {
 		output.innerHTML = "Please enter a wage and a number of hours worked.";
 	} else {
-		output.innerHTML = `Take Home: $${calculatePay() - calculateTax()}`;
+		output.innerHTML = `Take Home: <strong>$${calculatePay() - calculateTax()}</strong>`;
 	}
 }
