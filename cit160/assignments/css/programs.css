@@ -43,21 +43,33 @@ main {
 }
 
 main:before, main:after{
-    z-index:-1;
-    position:absolute;
-    content:"";
-    bottom:15px;
-    left:10px;
-    top:80%;
-    max-width:400px;
-    background:#777;
+    z-index: -1;
+    position: absolute;
+    border-radius:1em;
+    content: "";
+    bottom: 15px;
+    left: 0px;
+    width: 50%;
+    top: 80%;
+    max-width:700px;
+    background: #777;
+    -webkit-box-shadow: 0 15px 10px #777;
+    -moz-box-shadow: 0 15px 10px #777;
     box-shadow: 0 15px 10px #777;
-    transform: rotate(-3deg);
+    -webkit-transform: rotate(-2deg);
+    -moz-transform: rotate(-2deg);
+    -o-transform: rotate(-2deg);
+    -ms-transform: rotate(-2deg);
+    transform: rotate(-2deg);
 }
 main:after{
-    transform:rotate(3deg);
-    right:10px;
-    left:auto;
+    -webkit-transform: rotate(2deg);
+    -moz-transform: rotate(2deg);
+    -o-transform: rotate(2deg);
+    -ms-transform: rotate(2deg);
+    transform: rotate(2deg);
+    right: 0px;
+    left: auto;
 }
 
 h3 {
