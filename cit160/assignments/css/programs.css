@@ -35,11 +35,12 @@ h2, #currentdate {
 
 main {
     position:relative;
+    border:1px solid lightgray;
 	margin: 10px auto;
     border-radius:1em;
 	padding: 10px;
-	max-width: 500px;
-	background-color: #abe;
+    max-width: 500px;
+    background-color:#FFF;
 }
 
 main:before, main:after{
@@ -47,15 +48,15 @@ main:before, main:after{
     position: absolute;
     border-radius:1em;
     content: "";
-    bottom: 15px;
-    left: 0px;
+    bottom: 20px;
+    left: 5px;
     width: 50%;
-    top: 80%;
+    top: 90%;
     max-width:700px;
-    background: #777;
-    -webkit-box-shadow: 0 15px 10px #777;
-    -moz-box-shadow: 0 15px 10px #777;
-    box-shadow: 0 15px 10px #777;
+    background: #444;
+    -webkit-box-shadow: 0 15px 10px #444;
+    -moz-box-shadow: 0 15px 10px #444;
+    box-shadow: 0 15px 10px #444;
     -webkit-transform: rotate(-2deg);
     -moz-transform: rotate(-2deg);
     -o-transform: rotate(-2deg);
@@ -68,14 +69,14 @@ main:after{
     -o-transform: rotate(2deg);
     -ms-transform: rotate(2deg);
     transform: rotate(2deg);
-    right: 0px;
+    right: 5px;
     left: auto;
 }
 
 h3 {
 	font-size: 24px;
 	margin: 0 0 15px 0;
-	border-bottom: 1px solid #333;
+	border-bottom: 1px solid #8091C4;
 	padding: 0;
 }
 
@@ -84,6 +85,30 @@ label {
 	margin: 5px;
 }
 
-table input{
-	width:95%;
+table input, input{
+    border:0px collapse;
+    width:95%;
+    height:2em;
+    font-size:12pt;
+}
+
+table h4{
+    padding:0;
+}
+
+button{
+    background-color: lightseagreen;
+    color:#FFF;
+    border: 2px solid lightseagreen;
+    border-radius:.5em;
+    font-size:14pt;
+    padding:.5em;
+    margin-bottom:20px;
+    transition:background-color .2s;
+}
+
+button:hover{
+    cursor:pointer;
+    background-color: rgb(195, 252, 249);
+    color: lightseagreen;
 }
