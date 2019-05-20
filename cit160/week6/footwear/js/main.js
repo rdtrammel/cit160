@@ -1,6 +1,10 @@
 document.getElementById('currentdate').innerHTML = new Date().toLocaleDateString();
 //Write a defining table and a program that helps a user choose the correct foot wear for the day’s weather. The following table shows the weather types the user may enter and what your program should output.
 
+getShoes();
+
+document.getElementById("weatherpicker").focus();
+
 function getShoes(){
 	let weather = document.getElementById("weatherpicker").value;
 	if (weather){
@@ -10,7 +14,7 @@ function getShoes(){
 			case "raining" : shoes="Galoshes"; break;
 			default : shoes="Boots"; break;
 		}
-		document.getElementById("output").innerHTML=`<hr><br>If it's ${weather} outside them you should definitely wear your ${shoes} today. ${addPersonality()}`;
+		document.getElementById("output").innerHTML=`<hr><br><strong>If it's ${weather} outside then you should definitely wear your <i>${shoes}</i> today. ${addPersonality()}</strong><br><br>`;
 	}
 }
 

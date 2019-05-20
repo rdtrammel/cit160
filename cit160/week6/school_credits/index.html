@@ -8,18 +8,16 @@
         <link rel="stylesheet" href="../../assignments/css/programs.css">
     <body>
         <header>
-            <h1>Week 6: Footwear Calculator</h1>
+            <h1>Week 6: School Credits</h1>
             <h2>Robert Trammel</h2>
         </header>
         <main>
-            <h3>Footwear for Today</h3>
-            <label>What is the Weather like today?
-                <select id="weatherpicker" onchange="getShoes()">
-                    <option value="hot">Hot</option>
-                    <option value="raining">Rain</option>
-                    <option value="snowing">Snow</option>
-                </select>
+            <h3>What grade am I in?</h3>
+            <label>
+                How many credits do you have?
+                <input id="credits" type="number" value="0" min="0">
             </label>
+            <button onclick="getGradeLevel()">Tell Me</button>
         <br>
         <span id="output"></span>
         </main>
