@@ -85,7 +85,8 @@ label {
 	margin: 5px;
 }
 
-table input, input{
+table input, input, select{
+    text-align:center;
     border:0px collapse;
     width:95%;
     height:2em;
