@@ -1,8 +1,6 @@
 document.getElementById('currentdate').innerHTML = new Date().toLocaleDateString();
 //Write a defining table and a program that helps a user choose the correct foot wear for the day’s weather. The following table shows the weather types the user may enter and what your program should output.
 
-getShoes();
-
 document.getElementById("weatherpicker").focus();
 
 function getShoes(){
