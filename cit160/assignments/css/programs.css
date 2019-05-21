@@ -84,6 +84,9 @@ label {
 	display: block;
 	margin: 5px;
 }
+table{
+    width:100%;
+}
 
 table input, input, select{
     text-align:center;
@@ -95,6 +98,19 @@ table input, input, select{
 
 table h4{
     padding:0;
+}
+
+table .left-align{
+    text-align:left;
+}
+
+table .right-align{
+    text-align:right;
+}
+
+table .highlight-row{
+    color:green;
+    font-weight:bold;
 }
 
 button{
