@@ -1,59 +1,79 @@
 document.getElementById('currentdate').innerHTML = new Date().toLocaleDateString();
 
-//Bank of Ririe down payment calculation table
-/*Cost of House		            Down Payment
-$0	–	$49,999.99		        5% * cost
-$50,000	–	$99,999.99		    $2,000 + 10% * (cost − $50,000)
-$100,000	–	$199,999.99		$7,500 + 20% * (cost − $100,000)
-$200,000	–	∞		        $27,500 + 25% * (cost − $200,000)*/
+/*
+The Library allows loans based on the following table:
+Patron Status	Overdue Books	Loan Duration(weeks)
+Student	        0	            6
+Student	        Fewer than 3	4
+Student	        3 or More	    2
+Faculty	        0	            16
+Faculty	        Fewer than 3	12
+Faculty	        3 or More	    8
+Other	        0	            4
+Other	        Fewer than 3	3
+Other	        3 or More	    2
+*/
+let data = {
+    student : [6,4,2],
+    faculty : [16,12,8],
+    other : [4,3,2]
+}
 
-//This gets the down payment
-function getDownPayment(){
-    let cost = document.getElementById('cost').value;
-    if (cost){
-        let downPayment, row;
-        switch(true){
-            case (cost < 50000) : downPayment = (cost * .05); row = 1; break;
-            case (cost < 100000) : downPayment = 2000 + (.1 * (cost - 50000)); row = 2; break;
-            case (cost < 200000) : downPayment = 7500 + (.2 * (cost - 100000)); row = 3; break;
-            default : downPayment = 27500 + (.25 * (cost - 200000)); row = 4; break;
-        }
-        //I found out that there is a currency formatter as part of the International API that is 95%+ supported.
-        formatter = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' });
-        document.getElementById("calculate").style = "display:none";
-        document.getElementById("output").innerHTML = `
-            <h3>
-                <br>Down Payment
-                <br>${formatter.format(downPayment)}
-                <br><br>
-            </h3>`;
-        highlightRow(row);
+//I voted to use a json structure because the nested if's and switches were getting a little hard to follow.
+function getDurationData(){
+    //Clear the feedback message in case there were any errors
+    resetFeedback();
+    //Start be getting the value of the Patron
+    let patronType = document.getElementById("patron").value;
+    let feedback;
+    if (patronType){
+        //If there was a valid patron type, then check to see if the overdue books are also valid
+        let overdueBooks = document.getElementById("overdue").value;
+        if (overdueBooks != "" && overdueBooks >= 0){
+            let duration;
+            //If there was a valid value for overdue books, then get and set the duration
+            switch(true){
+                case overdueBooks == 0 : 
+                    duration = data[patronType][0]; 
+                    highlightRow(patronType,0);
+                    break;
+                case overdueBooks < 3: 
+                    duration = data[patronType][1]; 
+                    highlightRow(patronType,1);
+                    break;
+                default : 
+                    duration = data[patronType][2];
+                    highlightRow(patronType,2);
+                    break;
+            }
+            document.getElementById("duration").value = duration;
+        } else { feedback = "Please enter a number greater than 0 for overdue books."}
+    }else{ feedback = "Please select a patron type from the drop down."}
+    if(feedback){
+        document.getElementById("feedback").innerHTML = feedback;
+        document.getElementById("duration").value = "0";
     }
 }
 
-//I wanted to hide the button and display the result in its place.
-//This listener will reset the form when the cost of the house is changed
-document.getElementById("cost").addEventListener("change", resetButton);
+document.getElementById("patron").addEventListener("change", getDurationData);
+document.getElementById("overdue").addEventListener("change", getDurationData);
 
-function resetButton(){
-    document.getElementById("output").innerHTML = "";
-    document.getElementById("calculate").style = "";
+function resetFeedback(){
+    document.getElementById("feedback").innerHTML = "";
 }
 
-//I wanted to add some highlighting for the down payment calculator schedule so that users could easily see the underlying math that got their result.
+function highlightRow(str, num){
+    resetHighlight();
+    let chart = document.querySelectorAll("table")[0].querySelectorAll("tr");
+    switch(str){
+        case "student" : chart[num+1].classList.add("highlight-row"); break;
+        case "faculty" : chart[num+4].classList.add("highlight-row"); break;
+        default : chart[num+7].classList.add("highlight-row"); break;
+    } 
+}
 
-//To do that We'll need a function that adds a highlight class to the row, and a function that will reset all of the rows in a table so that it only highlights one row at a time.
-let costChartRows = document.querySelectorAll("tr");
-
-function resetRows(){
-    costChartRows.forEach(row=>{
+function resetHighlight(){
+    document.querySelectorAll("table")[0].querySelectorAll("tr").forEach(row=>{
         row.className = "";
     });
-}
-
-function highlightRow(num){
-    //Before highlighting a row, remove the highlight class from all rows
-    resetRows();
-    //Add the highlight class to the given row number
-    costChartRows[num].classList.add("highlight-row");
 }
