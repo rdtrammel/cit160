@@ -22,8 +22,8 @@ let data = {
 //I voted to use a json structure because the nested if's and switches were getting a little hard to follow.
 function getDurationData(){
     //Clear the feedback message in case there were any errors
-    resetFeedback();
-    //Start be getting the value of the Patron
+    document.getElementById("feedback").innerHTML = "";
+    //Start be getting the value of the Patron Type
     let patronType = document.getElementById("patron").value;
     let feedback;
     if (patronType){
