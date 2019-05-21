@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Template for submissions of my CIT 160 coursework at BYUi">
+        <title>Week 6 - Selections</title>
+        <link rel="stylesheet" href="../../assignments/css/programs.css">
+    </head>
+    <body>
+        <header>
+            <h1>Week 6: Roman Numeral Converter</h1>
+            <h2>Robert Trammel</h2>
+        </header>
+        <main> 
+            <h3>Roman Numeral Converter</h3>
+            <table>
+                <tr>
+                    <td class="left-align">First Number</td>
+                    <td class="left-align">Operator</td>
+                    <td class="left-align">Second number</td>
+                    <td></td>
+                    <td class="left-align">Result</td>
+                </tr>
+                <tr>
+                    <td><input type="number" id="first-number" value=""></td>
+                    <td>
+                        <select id="operator">
+                            <option value="" selected disabled hidden></option>
+                            <option value="+">+</option>
+                            <option value="-">-</option>
+                            <option value="*">*</option>
+                            <option value="/">/</option>
+                        </select>
+                    </td>
+                    <td><input type="number" id="second-number" value=""></td>
+                    <td>=</td>
+                    <td><input type="number" id="answer" value=""></td>
+                </tr>
+            </table>
+            <hr>
+            <button onclick="getRomanNumeral()">Check my Math</button>
+            <div id="output"></div>
+        </main>
+        <footer>
+            &copy;2019 &bull; Robert Trammel &bull; BYU-Idaho &bull; CIT 160 &bull; <span id="currentdate"></span>
+        </footer>
+        <script src="romannumerals.js"></script>
+    </body>
+</html>

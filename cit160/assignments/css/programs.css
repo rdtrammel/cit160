@@ -73,6 +73,10 @@ main:after{
     left: auto;
 }
 
+.error-highlight{
+    background-color: blanchedalmond;
+}
+
 h3 {
 	font-size: 24px;
 	margin: 0 0 15px 0;
