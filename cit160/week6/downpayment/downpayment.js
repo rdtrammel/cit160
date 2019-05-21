@@ -7,8 +7,7 @@ $50,000	–	$99,999.99		    $2,000 + 10% * (cost − $50,000)
 $100,000	–	$199,999.99		$7,500 + 20% * (cost − $100,000)
 $200,000	–	∞		        $27,500 + 25% * (cost − $200,000)*/
 
-let costChartRows = document.querySelectorAll("tr");
-
+//This gets the down payment
 function getDownPayment(){
     let cost = document.getElementById('cost').value;
     if (cost){
@@ -32,12 +31,19 @@ function getDownPayment(){
     }
 }
 
+//I wanted to hide the button and display the result in its place.
+//This listener will reset the form when the cost of the house is changed
 document.getElementById("cost").addEventListener("change", resetButton);
 
 function resetButton(){
     document.getElementById("output").innerHTML = "";
     document.getElementById("calculate").style = "";
 }
+
+//I wanted to add some highlighting for the down payment calculator schedule so that users could easily see the underlying math that got their result.
+
+//To do that We'll need a function that adds a highlight class to the row, and a function that will reset all of the rows in a table so that it only highlights one row at a time.
+let costChartRows = document.querySelectorAll("tr");
 
 function resetRows(){
     costChartRows.forEach(row=>{
@@ -46,6 +52,8 @@ function resetRows(){
 }
 
 function highlightRow(num){
+    //Before highlighting a row, remove the highlight class from all rows
     resetRows();
+    //Add the highlight class to the given row number
     costChartRows[num].classList.add("highlight-row");
 }
