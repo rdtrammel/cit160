@@ -52,15 +52,12 @@ function getDurationData(){
     if(feedback){
         document.getElementById("feedback").innerHTML = feedback;
         document.getElementById("duration").value = "0";
+        resetHighlight();
     }
 }
 
 document.getElementById("patron").addEventListener("change", getDurationData);
 document.getElementById("overdue").addEventListener("change", getDurationData);
-
-function resetFeedback(){
-    document.getElementById("feedback").innerHTML = "";
-}
 
 function highlightRow(str, num){
     resetHighlight();
