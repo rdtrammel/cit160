@@ -47,8 +47,14 @@ function getDurationData(){
                     break;
             }
             document.getElementById("duration").value = duration;
-        } else { feedback = "Please enter a number greater than 0 for overdue books."}
-    }else{ feedback = "Please select a patron type from the drop down."}
+        } else { 
+            feedback = "Please enter a number greater than 0 for overdue books.";
+            document.getElementById("overdue").focus();
+        }
+    }else{ 
+        feedback = "Please select a patron type from the drop down.";
+        document.getElementById("patron").focus();
+    }
     if(feedback){
         document.getElementById("feedback").innerHTML = feedback;
         document.getElementById("duration").value = "0";
