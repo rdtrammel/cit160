@@ -18,3 +18,16 @@ C	    100
 D	    500
 M	    1000
 */
+
+function whenInRome(){
+    let number = parseInt(document.getElementById("arabic-number").value);
+    //Every 5, you're going to change the leading numeral
+    //On 5, you'll have both.
+    let ones, tens, hundreds, thousands;
+    if ( number < 4 ) { 
+        for ( let i = 0 ; i > 3 ; i++){ones+= "I"} 
+        if (number === 4) ones +="V";
+    } else if (number < 4) {
+        for ( let i = 0 ; i > 3 ; i++ ){ ones+="I"}
+    }
+}

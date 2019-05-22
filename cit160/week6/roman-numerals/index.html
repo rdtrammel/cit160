@@ -14,32 +14,8 @@
         </header>
         <main> 
             <h3>Roman Numeral Converter</h3>
-            <table>
-                <tr>
-                    <td class="left-align">First Number</td>
-                    <td class="left-align">Operator</td>
-                    <td class="left-align">Second number</td>
-                    <td></td>
-                    <td class="left-align">Result</td>
-                </tr>
-                <tr>
-                    <td><input type="number" id="first-number" value=""></td>
-                    <td>
-                        <select id="operator">
-                            <option value="" selected disabled hidden></option>
-                            <option value="+">+</option>
-                            <option value="-">-</option>
-                            <option value="*">*</option>
-                            <option value="/">/</option>
-                        </select>
-                    </td>
-                    <td><input type="number" id="second-number" value=""></td>
-                    <td>=</td>
-                    <td><input type="number" id="answer" value=""></td>
-                </tr>
-            </table>
-            <hr>
-            <button onclick="getRomanNumeral()">Check my Math</button>
+            <label>Enter Number<input type="number" id="arabic-number" min="0" value="0"></label>
+            <button onclick="whenInRome()">Do as the Romans do</button>
             <div id="output"></div>
         </main>
         <footer>
