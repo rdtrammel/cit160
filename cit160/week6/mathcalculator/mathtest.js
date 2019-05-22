@@ -8,10 +8,14 @@ The program should randomly create two positive integers of max values of 100 an
 resetForm();
 
 function resetForm(){
-    document.getElementById("first-number").value = parseInt(Math.random() * 100);
-    document.getElementById("second-number").value = parseInt(Math.random() * 100);
-    document.getElementById("operator").value = "";
+    let operator = document.getElementById("operator");
+    document.getElementById("first-number").value = Math.floor(Math.random() * 100);
+    document.getElementById("second-number").value = Math.floor(Math.random() * 100);
+    operator.value = operator.options[Math.floor(Math.random() * (Math.floor(operator.options.length) - 1) + 1)].value;
+    document.getElementById("output").innerHTML= "";
     document.getElementById("answer").value= "";
+    document.getElementById("answer").focus();
+    
 }
 
 function checkMyMath(){
@@ -28,13 +32,7 @@ function checkMyMath(){
         case "/" : compAnswer = x / y; break;
         default : console.log("An invalid operator was chosen."); break;
     } 
-    if (userAnswer != compAnswer){
-        //Display message stating that the answer was not correct
-        document.getElementById("output").innerHTML = `<br>Your answer was not correct. <br><strong>(${x} ${operator} ${y} = ${compAnswer})</strong>`;
-    } else {
-        //Display a message that states that the answer was correct.
-        document.getElementById("output").innerHTML = `<br>That's correct! Good Job!!!`;
-    }
+    displayMessage(userAnswer===compAnswer);
 }
 
 function fieldValidation(x, y, operator, userAnswer){
@@ -48,13 +46,15 @@ function fieldValidation(x, y, operator, userAnswer){
 }
 
 function resetFieldHighlight(){
-    //reset the class back to it's original form
+    //reset the field highlighting back to none
     document.getElementById("first-number").className = "";
     document.getElementById("second-number").className = "";
     document.getElementById("first-number").className = "";
     document.getElementById("answer").className = "";
 }
 
-function displayMessage(bool){
-
+function displayMessage(answerResult){
+    let message = answerResult ? `<br>That's correct! Good Job!!!` : `<br>Sorry. That is not correct.`;
+    document.getElementById("output").innerHTML = message;
+    setTimeout(resetForm, 3000);
 }
