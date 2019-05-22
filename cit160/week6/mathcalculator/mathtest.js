@@ -2,7 +2,18 @@ document.getElementById('currentdate').innerHTML = new Date().toLocaleDateString
 
 /*
 The program should allow a child to enter two numbers and an arithmetic operator (+, −, *, or /) and the child’s answer to the problem. The program should compute the correct answer and compare it to the child’s answer and output “Correct! Good job.” or “Incorrect. Try again!”
+The program should randomly create two positive integers of max values of 100 and display those integers along with the addition symbol (+) and then allow a child to enter the answer. The program should compute the correct answer and compare it to the child’s answer and output “Correct! Good job.” or “Sorry. That is incorrect.”
 */
+
+resetForm();
+
+function resetForm(){
+    document.getElementById("first-number").value = parseInt(Math.random() * 100);
+    document.getElementById("second-number").value = parseInt(Math.random() * 100);
+    document.getElementById("operator").value = "";
+    document.getElementById("answer").value= "";
+}
+
 function checkMyMath(){
     let x = parseFloat(document.getElementById("first-number").value);
     let y = parseFloat(document.getElementById("second-number").value);
@@ -42,4 +53,8 @@ function resetFieldHighlight(){
     document.getElementById("second-number").className = "";
     document.getElementById("first-number").className = "";
     document.getElementById("answer").className = "";
+}
+
+function displayMessage(bool){
+
 }
