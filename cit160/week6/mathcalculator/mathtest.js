@@ -41,5 +41,5 @@ function resetFieldHighlight(){
     document.getElementById("first-number").className = "";
     document.getElementById("second-number").className = "";
     document.getElementById("first-number").className = "";
-    document.getElementById("first-number").className = "";
+    document.getElementById("answer").className = "";
 }
