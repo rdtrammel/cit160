@@ -18,27 +18,31 @@ C	    100
 D	    500
 M	    1000
 
+Mapping:
 1-10 will be [I, V, X]
 10-100 will be [X, L, C]
 100-1000 will be [C, D, M]
 1000+ will be [M] max is 3000
 */
+
+//Added this event listener because I got tired of clicking the button over and over.
 document.getElementById("arabic-number").addEventListener("change", whenInRome );
 
 function whenInRome(){
-    //We have to declare output as a string first or the first time we concatenate we'll get undefined and then the value appended
+    //We have to declare output as a string first or the first value will be "undefinedI"
     let output=new String();
 
     //We convert the number into a string and then break it into an array using the split function
     let number = String(document.getElementById("arabic-number").value).split("");
 
-    //length-1 means, get the outermost element in the array, which for us would be the ones column.
+    //length-1 means, get the outermost element in this new array, which for us would be the ones column.
     let ones = parseInt(number[number.length-1]);
     let tens = parseInt(number[number.length-2]);
     let hundreds = parseInt(number[number.length-3]);
 
     //The thousands have a limit of 3, so if the number goes above 3, then we just stop.
     let thousands = parseInt(number[number.length-4]);
+    //This ternary solves that. It essentially says, if (thousands > 3) 3, else, just use the thousands.
     thousands = thousands > 3 ? 3 : thousands;
 
     //getNumerals is designed to handle the numbers 0-9, then we just pass in what characters will be used as an array.
@@ -47,6 +51,8 @@ function whenInRome(){
     if (hundreds) output += getNumerals(hundreds, ["C", "D", "M"]);
     if (tens) output += getNumerals(tens, ["X", "L", "C"]);
     if (ones) output += getNumerals(ones, ["I", "V", "X"]);
+
+    //Write the final output to the page
     document.getElementById("output").innerHTML = output;
 }
 
@@ -61,4 +67,4 @@ function getNumerals(num, chars){
     return output;
 }
 
-//I checked my work agains https://www.thecalculatorsite.com/misc/romannumerals.php by pasting in my output and clicking "Convert". It's able to return back the alphanumeric code back to me successfully.
+//I checked my work against https://www.thecalculatorsite.com/misc/romannumerals.php by pasting in my output and clicking "Convert". It's able to return back the alphanumeric code back to me successfully.
