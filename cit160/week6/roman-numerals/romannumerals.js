@@ -26,8 +26,10 @@ function whenInRome(){
     let ones, tens, hundreds, thousands;
     if ( number < 4 ) { 
         for ( let i = 0 ; i > 3 ; i++){ones+= "I"} 
-        if (number === 4) ones +="V";
-    } else if (number < 4) {
+        ones +="V";
+    } else if (number > 4) {
+        ones +="V";
         for ( let i = 0 ; i > 3 ; i++ ){ ones+="I"}
     }
+    document.getElementById("output").innerHTML = ones;
 }
