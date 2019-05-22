@@ -26,16 +26,23 @@ M	    1000
 document.getElementById("arabic-number").addEventListener("change", whenInRome );
 
 function whenInRome(){
-    let output="";
-    //Break the number into an array
+    //We have to declare output as a string first or the first time we concatenate we'll get undefined and then the value appended
+    let output=new String();
+
+    //We convert the number into a string and then break it into an array using the split function
     let number = String(document.getElementById("arabic-number").value).split("");
+
+    //length-1 means, get the outermost element in the array, which for us would be the ones column.
     let ones = parseInt(number[number.length-1]);
     let tens = parseInt(number[number.length-2]);
     let hundreds = parseInt(number[number.length-3]);
+
     //The thousands have a limit of 3, so if the number goes above 3, then we just stop.
     let thousands = parseInt(number[number.length-4]);
     thousands = thousands > 3 ? 3 : thousands;
+
     //getNumerals is designed to handle the numbers 0-9, then we just pass in what characters will be used as an array.
+    //Call the function on each placement and concatenate any valid values together 
     if (thousands) output += getNumerals(thousands, ["M"]);
     if (hundreds) output += getNumerals(hundreds, ["C", "D", "M"]);
     if (tens) output += getNumerals(tens, ["X", "L", "C"]);
@@ -53,3 +60,5 @@ function getNumerals(num, chars){
     }
     return output;
 }
+
+//I checked my work agains https://www.thecalculatorsite.com/misc/romannumerals.php by pasting in my output and clicking "Convert". It's able to return back the alphanumeric code back to me successfully.
