@@ -19,7 +19,7 @@ D	    500
 M	    1000
 
 Mapping:
-1-10 will be [I, V, X]
+1-10 will be [I, V, X] 
 10-100 will be [X, L, C]
 100-1000 will be [C, D, M]
 1000+ will be [M] max is 3000
@@ -31,26 +31,35 @@ document.getElementById("arabic-number").addEventListener("change", whenInRome )
 function whenInRome(){
     //We have to declare output as a string first or the first value will be "undefinedI"
     let output=new String();
+    //The thousands have a limit of 3, so the max number is 3999
+    let max = 3999;
 
-    //We convert the number into a string and then break it into an array using the split function
-    let number = String(document.getElementById("arabic-number").value).split("");
+    
+    let numberEl = document.getElementById("arabic-number");
+    let number = parseInt(numberEl.value);
+    //If the user types a number greater than the max, set the number to the max value and reset the field.
+    if (number > max) {number = max; numberEl.value = max;}
+
+    //We convert the number into a string and then break it into an array using the split function to work on each individual digit
+    let numArr = String(number).split("");
 
     //length-1 means, get the outermost element in this new array, which for us would be the ones column.
-    let ones = parseInt(number[number.length-1]);
-    let tens = parseInt(number[number.length-2]);
-    let hundreds = parseInt(number[number.length-3]);
-
-    //The thousands have a limit of 3, so if the number goes above 3, then we just stop.
-    let thousands = parseInt(number[number.length-4]);
+    let ones = parseInt(numArr[numArr.length-1]);
+    let tens = parseInt(numArr[numArr.length-2]);
+    let hundreds = parseInt(numArr[numArr.length-3]);
+    let thousands = parseInt(numArr[numArr.length-4]);  
+    
     //This ternary solves that. It essentially says, if (thousands > 3) 3, else, just use the thousands.
-    thousands = thousands > 3 ? 3 : thousands;
+    if (thousands > 3) thousands = 3;
 
     //getNumerals is designed to handle the numbers 0-9, then we just pass in what characters will be used as an array.
     //Call the function on each placement and concatenate any valid values together 
+    output = `<font size="16pt">`
     if (thousands) output += getNumerals(thousands, ["M"]);
     if (hundreds) output += getNumerals(hundreds, ["C", "D", "M"]);
     if (tens) output += getNumerals(tens, ["X", "L", "C"]);
     if (ones) output += getNumerals(ones, ["I", "V", "X"]);
+    output += `</font>`
 
     //Write the final output to the page
     document.getElementById("output").innerHTML = output;
@@ -59,12 +68,26 @@ function whenInRome(){
 function getNumerals(num, chars){
     //At 4 and 9 you're going to change the leading numeral
     let output = "";
-    if (num < 5){ 
-        if ( num === 4 ){ output = `${chars[0]}${chars[1]}` }else{ for (let i = 0 ; i < num && i < 3 ; i++){ output += chars[0];} }
-    } else {
-        if (num === 9){ output=`${chars[0]}${chars[2]}`}else{output = chars[1]; for (let i = 0; i < num - 5; i++){ output += chars[0];}} 
+    if (num < 5){ //start simple and process the numbers from 1 to 4
+        if ( num === 4 ){ 
+            //If the number is 4, then we take the character that starts at 5 and put it after the first char. 
+            //For instance, you wouldn't write IIII, you would write IV, 
+            //Also, 
+            output = `${chars[0]}${chars[1]}` 
+        }else{ 
+            for (let i = 0 ; i < num && i < 3 ; i++){ output += chars[0];} 
+        }
+    } else { 
+        //continue simple and process the numbers from 5 to 9
+        if (num === 9){ 
+            //For 9, you wouldn't write VIIII, you would write IX. The first and last character.
+            output=`${chars[0]}${chars[2]}`
+        }else{
+            //For everything else, you're going to lead with a V, and then append as many I's as possible
+            output = chars[1]; 
+            for (let i = 0; i < num - 5; i++){ output += chars[0];}
+        } 
     }
+    //Because this can be repeated for each of the digit spaces, I opted to pass in the number in that position, and an array of symbols needed to represent the number in each specific place
     return output;
 }
-
-//I checked my work against https://www.thecalculatorsite.com/misc/romannumerals.php by pasting in my output and clicking "Convert". It's able to return back the alphanumeric code back to me successfully.
