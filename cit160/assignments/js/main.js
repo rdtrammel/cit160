@@ -11,8 +11,8 @@ let thisWeek = 5;
 
 initPage();
 
-weeks.querySelector("h2").forEach((week, i)=>{
-    week.addEventListener("click", ()=>{week.querySelector("ul").classList.toggle("collapsed");});
+weeks.forEach((week, i)=>{
+    week.querySelector("h2").addEventListener("click", ()=>{week.querySelector("ul").classList.toggle("collapsed");});
 });
 
 function initPage(){
