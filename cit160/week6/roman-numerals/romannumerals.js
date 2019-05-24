@@ -19,9 +19,9 @@ D	    500
 M	    1000
 
 Mapping:
-1-10 will be [I, V, X] 
-10-100 will be [X, L, C]
-100-1000 will be [C, D, M]
+1-10 will use [I, V, X] 
+10-100 will use [X, L, C]
+100-1000 will use [C, D, M]
 1000+ will be [M] max is 3000
 */
 
@@ -44,17 +44,22 @@ function whenInRome(){
     let numArr = String(number).split("");
 
     //length-1 means, get the outermost element in this new array, which for us would be the ones column.
+    //Consider the number 1,204. 
+    //Converted to an array [1,0,2,4].
+    //The length would be 4 because there are 4 items
+    //Arrays are 0 indexed, so in order to retreive the last item in the array, you get the length, and subtract 1
+    //To get the second from last, you subtract 2, etc.
     let ones = parseInt(numArr[numArr.length-1]);
     let tens = parseInt(numArr[numArr.length-2]);
     let hundreds = parseInt(numArr[numArr.length-3]);
     let thousands = parseInt(numArr[numArr.length-4]);  
     
-    //This ternary solves that. It essentially says, if (thousands > 3) 3, else, just use the thousands.
+    //Thousands can't go above 3 in this example
     if (thousands > 3) thousands = 3;
 
     //getNumerals is designed to handle the numbers 0-9, then we just pass in what characters will be used as an array.
     //Call the function on each placement and concatenate any valid values together 
-    output = `<font size="16pt">`
+    output = `<font size="14pt">`
     if (thousands) output += getNumerals(thousands, ["M"]);
     if (hundreds) output += getNumerals(hundreds, ["C", "D", "M"]);
     if (tens) output += getNumerals(tens, ["X", "L", "C"]);
@@ -83,7 +88,7 @@ function getNumerals(num, chars){
             //For 9, you wouldn't write VIIII, you would write IX. The first and last character.
             output=`${chars[0]}${chars[2]}`
         }else{
-            //For everything else, you're going to lead with a V, and then append as many I's as possible
+            //For everything else, you're going to lead with the second character, and then append as many of the first character up to 8
             output = chars[1]; 
             for (let i = 0; i < num - 5; i++){ output += chars[0];}
         } 
