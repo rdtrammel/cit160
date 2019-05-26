@@ -54,7 +54,17 @@ function resetFieldHighlight(){
 }
 
 function displayMessage(answerResult){
-    let message = answerResult ? `<br>That's correct! Good Job!!!` : `<br>Sorry. That is not correct.`;
-    document.getElementById("output").innerHTML = message;
-    setTimeout(resetForm, 3000);
+    if (answerResult){
+        document.getElementById("output").innerHTML = `<br>That's correct! Good Job!!!`;
+        setTimeout(resetForm, 3000);
+    } else {
+    document.getElementById("output").innerHTML = `<br>Sorry. That is not correct. Try again!`;
+    }
 }
+
+
+
+
+
+
+
