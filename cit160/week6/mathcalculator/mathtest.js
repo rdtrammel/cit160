@@ -7,17 +7,6 @@ The program should randomly create two positive integers of max values of 100 an
 
 resetForm();
 
-function resetForm(){
-    let operator = document.getElementById("operator");
-    document.getElementById("first-number").value = Math.floor(Math.random() * 100);
-    document.getElementById("second-number").value = Math.floor(Math.random() * 100);
-    operator.value = operator.options[Math.floor(Math.random() * (Math.floor(operator.options.length) - 1) + 1)].value;
-    document.getElementById("output").innerHTML= "";
-    document.getElementById("answer").value= "";
-    document.getElementById("answer").focus();
-    
-}
-
 function checkMyMath(){
     let x = parseFloat(document.getElementById("first-number").value);
     let y = parseFloat(document.getElementById("second-number").value);
@@ -31,35 +20,45 @@ function checkMyMath(){
         case "*" : compAnswer = x * y; break;
         case "/" : compAnswer = x / y; break;
         default : console.log("An invalid operator was chosen."); break;
-    } 
-    displayMessage(userAnswer===compAnswer);
+    }
+    if (userAnswer===compAnswer){
+        document.getElementById("message").innerHTML = `<br>That's correct! Good Job!!!`;
+        setTimeout(resetForm, 3000);
+    } else {
+        document.getElementById("message").innerHTML = `<br>Sorry. That is not correct. Try again!`;
+        setTimeout(resetAnswer, 2000);
+    }
 }
 
 function fieldValidation(x, y, operator, userAnswer){
     resetFieldHighlight();
-    let result = true;
-    if ( x != 0 && !x ){ document.getElementById("first-number").classList.add("error-highlight");result=false;} //highlight first-number field
-    if ( y != 0 && !y ){ document.getElementById("second-number").classList.add("error-highlight"); result=false;} //highlight second-number field
-    if (!operator){ document.getElementById("first-number").classList.add("error-highlight"); result=false;} //Highlight the operator field
-    if ( userAnswer != 0 && !userAnswer){ document.getElementById("answer").classList.add("error-highlight"); result=false;} //Highlight the answer field 
-    if (result){ return result; } else { document.getElementById("output").innerHTML = `<br><font color="red">Please fill out the highlighted fields.</font>`; }    
+    let isValid = true;
+    if ( x != 0 && !x ){ document.getElementById("first-number").classList.add("error-highlight");isValid=false;} //highlight first-number field
+    if ( y != 0 && !y ){ document.getElementById("second-number").classList.add("error-highlight"); isValid=false;} //highlight second-number field
+    if (!operator){ document.getElementById("operator").classList.add("error-highlight"); isValid=false;} //Highlight the operator field
+    if ( userAnswer != 0 && !userAnswer){ document.getElementById("answer").classList.add("error-highlight"); isValid=false;} //Highlight the answer field 
+    if (isValid){ return isValid; } else { document.getElementById("message").innerHTML = `<br><font color="red">Please fill out the highlighted fields.</font>`; }    
 }
 
 function resetFieldHighlight(){
-    //reset the field highlighting back to none
     document.getElementById("first-number").className = "";
     document.getElementById("second-number").className = "";
-    document.getElementById("first-number").className = "";
+    document.getElementById("operator").className = "";
     document.getElementById("answer").className = "";
 }
 
-function displayMessage(answerResult){
-    if (answerResult){
-        document.getElementById("output").innerHTML = `<br>That's correct! Good Job!!!`;
-        setTimeout(resetForm, 3000);
-    } else {
-    document.getElementById("output").innerHTML = `<br>Sorry. That is not correct. Try again!`;
-    }
+function resetForm(){
+    document.getElementById("first-number").value = Math.floor(Math.random() * 100);
+    document.getElementById("second-number").value = Math.floor(Math.random() * 100);
+    let operator = document.getElementById("operator");
+    operator.value = operator.options[Math.floor(Math.random() * (Math.floor(operator.options.length) - 1) + 1)].value;
+    resetAnswer();
+}
+
+function resetAnswer(){
+    document.getElementById("message").innerHTML = "";
+    document.getElementById("answer").value = "";
+    document.getElementById("answer").focus();
 }
 
 
