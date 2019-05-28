@@ -8,10 +8,12 @@ The program should randomly create two positive integers of max values of 100 an
 resetForm();
 
 function checkMyMath(){
+    //INPUT
     let x = parseFloat(document.getElementById("first-number").value);
     let y = parseFloat(document.getElementById("second-number").value);
     let operator = document.getElementById("operator").value;
     let userAnswer = parseFloat(document.getElementById("answer").value);
+    //PROCESSING
     let compAnswer;
     if (!fieldValidation(x,y,operator,userAnswer)){return};
     switch(operator){
@@ -21,6 +23,7 @@ function checkMyMath(){
         case "/" : compAnswer = x / y; break;
         default : console.log("An invalid operator was chosen."); break;
     }
+    //OUTPUT
     if (userAnswer===compAnswer){
         document.getElementById("message").innerHTML = `<br>That's correct! Good Job!!!`;
         setTimeout(resetForm, 3000);
@@ -28,6 +31,20 @@ function checkMyMath(){
         document.getElementById("message").innerHTML = `<br>Sorry. That is not correct. Try again!`;
         setTimeout(resetAnswer, 2000);
     }
+}
+
+function resetForm(){
+    document.getElementById("first-number").value = Math.floor(Math.random() * 100);
+    document.getElementById("second-number").value = Math.floor(Math.random() * 100);
+    let operator = document.getElementById("operator");
+    operator.value = operator.options[Math.floor(Math.random() * (Math.floor(operator.options.length) - 1) + 1)].value;
+    resetAnswer();
+}
+
+function resetAnswer(){
+    document.getElementById("message").innerHTML = "";
+    document.getElementById("answer").value = "";
+    document.getElementById("answer").focus();
 }
 
 function fieldValidation(x, y, operator, userAnswer){
@@ -46,24 +63,6 @@ function resetFieldHighlight(){
     document.getElementById("operator").className = "";
     document.getElementById("answer").className = "";
 }
-
-function resetForm(){
-    document.getElementById("first-number").value = Math.floor(Math.random() * 100);
-    document.getElementById("second-number").value = Math.floor(Math.random() * 100);
-    let operator = document.getElementById("operator");
-    operator.value = operator.options[Math.floor(Math.random() * (Math.floor(operator.options.length) - 1) + 1)].value;
-    resetAnswer();
-}
-
-function resetAnswer(){
-    document.getElementById("message").innerHTML = "";
-    document.getElementById("answer").value = "";
-    document.getElementById("answer").focus();
-}
-
-
-
-
 
 
 
