@@ -10,7 +10,8 @@ function getShoes(){
 		switch(weather){
 			case "hot" : shoes="Sandals"; break;
 			case "raining" : shoes="Galoshes"; break;
-			default : shoes="Boots"; break;
+			case "snowing" : shoes="Boots"; break;
+			default : shoes="Shoes"
 		}
 		document.getElementById("output").innerHTML=`<hr><br><strong>If it's ${weather} outside then you should definitely wear your <i>${shoes}</i> today. ${addPersonality()}</strong><br><br>`;
 	}
