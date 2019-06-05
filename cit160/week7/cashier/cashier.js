@@ -8,10 +8,11 @@ Finish by adding 6% sales tax to the balance. It looks like days are 0 based. So
 function checkOut(){
     let subtotal = parseFloat(document.getElementById("subtotal").value);
     let today = new Date().getDay();
-    //let today = 2 //uncomment to simulate Wednesday for testing discount
-    let discount = subtotal > 50 && (today == 2 || today == 3) ? subtotal * .1 : 0;
-    //Using toFixed converted to a string, so I wrapped the whole thing in a parseFloat.
+    //let today = 3 //uncomment to simulate Wednesday for testing discount
+    let discount = subtotal > 50 && (today == 2 || today == 3) ? parseFloat((subtotal * .1).toFixed(2)) : 0;
+    //Using toFixed converts to a string, so I wrapped the whole thing in a parseFloat
     let salesTax = parseFloat(((subtotal - discount) * .06).toFixed(2));
+    //Write it to the page
     document.getElementById("output").innerHTML = 
         `<div class="checkout-table">
             <table>
@@ -23,7 +24,7 @@ function checkOut(){
                 <tr>
                     <td>$${discount}</td>
                     <td>$${salesTax}</td>
-                    <td>$${parseFloat(((subtotal - discount)+salesTax).toFixed(2))}</td>
+                    <td>$${((subtotal - discount)+salesTax).toFixed(2)}</td>
                 </tr>
             </table>
         </div>
