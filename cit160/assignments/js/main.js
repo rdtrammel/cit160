@@ -17,7 +17,7 @@ weeks.forEach((week, i)=>{
 
 function initPage(){
     weeks.forEach((week, i)=>{ 
-        if (i != thisWeek - weekStart ){
+        if (i < thisWeek - weekStart ){
             week.querySelector("ul").classList.add("collapsed");
         }
     });
