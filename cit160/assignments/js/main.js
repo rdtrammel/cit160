@@ -7,12 +7,12 @@ let weeks = document.querySelectorAll(".week");
 let weekStart = 3;
 
 //Set this when we move to a new week
-let thisWeek = 5;
+let thisWeek = 7;
 
 initPage();
 
 weeks.forEach((week, i)=>{
-    week.addEventListener("click", ()=>{week.querySelector("ul").classList.toggle("collapsed");});
+    week.querySelector("h2").addEventListener("click", ()=>{week.querySelector("ul").classList.toggle("collapsed");});
 });
 
 function initPage(){
