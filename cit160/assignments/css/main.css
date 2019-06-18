@@ -221,3 +221,8 @@ footer h2 a:hover{
     text-align:center;
     z-index:1;
 }
+
+.type h3{
+    padding: .5em;
+    width:100%;
+}

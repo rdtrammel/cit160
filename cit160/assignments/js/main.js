@@ -4,24 +4,10 @@ let header = document.querySelector("header");
 let mainContent = document.querySelector(".main-content");
 let footerLabel = document.querySelector("footer h2");
 let weeks = document.querySelectorAll(".week");
-let weekStart = 3;
-
-//Set this when we move to a new week
-let thisWeek = 9;
-
-initPage();
 
 weeks.forEach((week, i)=>{
     week.querySelector("h2").addEventListener("click", ()=>{week.querySelector("ul").classList.toggle("collapsed");});
 });
-
-function initPage(){
-    weeks.forEach((week, i)=>{ 
-        if (i < thisWeek - weekStart ){
-            week.querySelector("ul").classList.add("collapsed");
-        }
-    });
-}
 
 //Add stickytop scrolling? For fun?
 window.addEventListener('scroll', ()=>{ setHeightListeners(); setWidthListeners();});
