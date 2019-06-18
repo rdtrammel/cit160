@@ -48,3 +48,7 @@
 #templeData tr:nth-child(even) {
     background-color: #bed
 }
+
+.output-data{
+    font-weight:bold;
+}
