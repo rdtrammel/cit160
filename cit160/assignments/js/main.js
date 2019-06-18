@@ -7,7 +7,7 @@ let weeks = document.querySelectorAll(".week");
 let weekStart = 3;
 
 //Set this when we move to a new week
-let thisWeek = 8;
+let thisWeek = 9;
 
 initPage();
 

@@ -23,18 +23,20 @@
     width: 50%;
 }
 
-#templeData {
+#templeData, .output-data {
     border-collapse: collapse;
     margin: 5px auto;
 }
 
-#templeData th {
+#templeData th, .output-data th{
     background-color: #444;
     color: #FFF;
 }
 
 #templeData th,
-#templeData td {
+#templeData td,
+.output-data th,
+.output-data td {
     border: 1px solid #999;
     padding: 7px;
 }
