@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Template for submissions of my CIT 160 coursework at BYUi">
+        <title>Week 10</title>
+        <link rel="stylesheet" href="../../css/programs.css">
+        <link rel="stylesheet" href="./windchill.css">
+    <body>
+        <header>
+            <h1>Week 10: Calculate Wind Chill Factor</h1>
+            <h2>Robert Trammel</h2>
+        </header>
+        <div class="github-link">
+            <img src="../../assets/icons8-github-filled-50.png" alt="Github Icon, not linked.">
+            <span>Link to this repo: <a href="https://github.com/rdtrammel/rdtrammel.github.io/tree/master/cit160/assignments/week10/windchill" 
+                target="_null">https://github.com/rdtrammel/rdtrammel.github.io/tree/master/cit160/assignments/week10windchill</a>
+            </span>
+        </div>
+        <main>
+            <h3>Windchill</h3>
+            <code>
+                <strong>Constraints</strong>: We cannot accurately calculate the wind chill factor for temperatures above <strong>50</strong> degrees or wind speeds below <strong>3</strong> mph. Entries not meeting either of these criteria will result in "N/A"
+            </code>
+            <br>
+            <br>
+            <table>
+                <tr>
+                    <th>Temperature <i>(&deg;F)</i></th>
+                    <th>Windspeed <i>(mph)</i></th>
+                    <th>Feels Like <i>(&deg;F)</i></th>
+                </tr>
+                <tr>
+                    <td><input id="temp" type="text"></td>
+                    <td><input id="wind" type="text"></td>
+                    <td><input id="chill" type="text" disabled></td>
+                </tr>
+            </table>
+            <!--<button click="doInputOutput()">Calculate</button>-->
+        </main>
+        <footer>
+            &copy;2019 &bull; Robert Trammel &bull; BYU-Idaho &bull; CIT 160 &bull; <span id="currentdate"></span>
+        </footer>
+        <script src="./windchill.js"></script>
+    </body>
+</html>

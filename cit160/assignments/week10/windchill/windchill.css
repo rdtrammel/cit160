@@ -1,0 +1,31 @@
+.checkout-table{
+    padding:1em;
+}
+
+.checkout-table tr{
+    background:white;
+}
+
+.code{
+    padding:2em;
+    max-width:960px;
+    font-size:10pt;
+    display:flex;
+    flex-flow:row;
+    margin:auto;
+}
+
+.gist-it-gist{
+    margin:10px;
+    background-color: #FFF;
+    text-align:left;
+    flex:1;
+    width:50%;
+}
+
+th {
+    background-color:#333;
+    color:#FFF;
+    font-weight:bold;
+    padding:.5em;
+}
