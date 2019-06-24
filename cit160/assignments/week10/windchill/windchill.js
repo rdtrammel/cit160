@@ -9,6 +9,7 @@ windEl.addEventListener("keyup", doInputOutput);
 
 function doInputOutput(){
     let chill = windChill(parseFloat(tempEl.value), parseFloat(windEl.value));
+    if (chill < -200) chill = "☠";
     chillEl.value = chill;
 }
 

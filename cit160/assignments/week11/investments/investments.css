@@ -1,0 +1,27 @@
+main label{
+    text-align:left;
+    padding:.5em;
+}
+
+main input{
+    position:relative;
+    float:right;
+    top:-.5em;
+    width:40%;
+    text-align:right;
+}
+
+.output input{
+    position:relative;
+    top:-2.5em;
+    right: 10px;
+    width:39%;
+    float:right;
+    text-align:right;
+}
+
+.output button{
+    position:relative;
+    left: -10px;
+    width:50%;
+}
