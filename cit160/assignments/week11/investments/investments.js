@@ -8,12 +8,13 @@ document.getElementById('currentdate').innerHTML = new Date().toLocaleDateString
     d) calls the computeFutureValue function
     e) displays the result to the user
 */
+doFV();
 function doFV(){
-    console.log("Am I running?");
     let principal = parseFloat(document.getElementById("principal").value);
     let rate = parseFloat(document.getElementById("rate").value);
     let years = parseInt(document.getElementById("years").value);
     let periods = parseInt(document.getElementById("periods").value);
+    document.getElementById("output").value = computeFutureValue(principal,rate,years,periods);
 }
 /*
 2) function computeFutureValue ()
