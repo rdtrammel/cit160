@@ -8,13 +8,13 @@ document.getElementById('currentdate').innerHTML = new Date().toLocaleDateString
     d) calls the computeFutureValue function
     e) displays the result to the user
 */
-doFV();
+
 function doFV(){
     let principal = parseFloat(document.getElementById("principal").value);
     let rate = parseFloat(document.getElementById("rate").value);
     let years = parseInt(document.getElementById("years").value);
     let periods = parseInt(document.getElementById("periods").value);
-    document.getElementById("output").value = computeFutureValue(principal,rate,years,periods);
+    document.getElementById("output").value = "$ " + computeFutureValue(principal, rate , years, periods);
 }
 /*
 2) function computeFutureValue ()
@@ -27,6 +27,10 @@ function doFV(){
         n is the total number of periods throughout the life of the investment. 
 */
 
-function computeFutureValue(principal, annualRate, years, periods){
-    return principal * (1 + (annualRate/periods)) * (periods*years);
+function computeFutureValue(principal, annualRate, years, periodsPerYear){
+    //Formula is f=a(1+r)^n
+    let periodRate = annualRate/periodsPerYear;
+    let totalPeriods = periodsPerYear*years;
+    let f = principal * Math.pow((1 + periodRate), totalPeriods);
+    return Number(f).toFixed(2);
 }
