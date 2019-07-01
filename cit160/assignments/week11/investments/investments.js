@@ -15,6 +15,7 @@ function doFV(){
     let years = parseInt(document.getElementById("years").value);
     let periods = parseInt(document.getElementById("periods").value);
     document.getElementById("output").value = '$' + computeFutureValue(principal, rate , years, periods);
+
 }
 /*
 2) function computeFutureValue ()
