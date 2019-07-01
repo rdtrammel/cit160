@@ -13,9 +13,10 @@ main input{
 
 .output input{
     position:relative;
+    padding-right:.75em;
     top:-2.5em;
     right: 10px;
-    width:39%;
+    width:36.5%;
     float:right;
     text-align:right;
 }

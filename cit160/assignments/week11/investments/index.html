@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Template for submissions of my CIT 160 coursework at BYUi">
-        <title>Week 10</title>
+        <title>Week 11: Functions</title>
         <link rel="stylesheet" href="../../css/programs.css">
         <link rel="stylesheet" href="./investments.css">
     <body>
@@ -12,19 +12,13 @@
             <h1>Week 11: Functions II</h1>
             <h2>Robert Trammel</h2>
         </header>
-        <div class="github-link">
-            <img src="../../assets/icons8-github-filled-50.png" alt="Github Icon, not linked.">
-            <span>Link to this repo: <a href="https://github.com/rdtrammel/rdtrammel.github.io/tree/master/cit160/assignments/week11/investments" 
-                target="_null">https://github.com/rdtrammel/rdtrammel.github.io/tree/master/cit160/assignments/week11/investments</a>
-            </span>
-        </div>
         <main>
             <h3>Investment Calculator</h3>
             <label>Amount Invested(principal) <input type="number" id="principal" min="0" value="100"></label>
             <label>Annual Rate (example: .08) <input type="number" id="rate" min="0" value="0.07"></label>
             <label>Number of Years <input type="number" id="years" min="0" value="10"></label>
             <label>Periods per year <input type="number" id="periods" min="0" value="4"></label>
-            <div class="output"><button onclick="doFV()">Compute future value</button> <input type="number" id="output" disabled></div>
+            <div class="output"><button onclick="doFV()">Compute future value</button> <input type="text" id="output" disabled></div>
         </main>
         <br>
         <footer>
