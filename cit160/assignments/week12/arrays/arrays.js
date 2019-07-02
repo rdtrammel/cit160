@@ -1,8 +1,7 @@
 document.getElementById('currentdate').innerHTML = new Date().toLocaleDateString();
 
-function runTests(count){
-    //Added optional count param to be called from the HTML onclick event
-    //If specified, it will generate that many tests to output
+function doTests(count){
+    //Added *optional* count param to be called from the HTML onclick event
     let output = "";
     //Generate Tests with optional param to specify a number of tests to generate
     generateTests(count).forEach((test)=>{
@@ -25,7 +24,10 @@ function runTests(count){
     </table><br>`;
 }
 
-function addEnds(arr){ return arr[0] + arr[arr.length -1] }
+function addEnds(arr){ 
+    //Return the sum of the first and last item in the array 
+    return arr[0] + arr[arr.length -1];
+}
 
 function getMiddle(arr){ 
     //If odd, get the middle value : If even, get average of middle values
@@ -40,7 +42,7 @@ function generateTests(count){
     for(let i = 0; i < countOfTests ; i++){
         //Create a new test array
         let test = [];
-        //Specify how many numbers will be in the array between min and max
+        //Randomly generate how many numbers will be in the array between a max and min
         let testLn = Math.floor(Math.random() * (maxLn - minLn) + minLn); 
         for(let n = 0; n < testLn ; n++){
             //Push randomly generated number between 0 and 10 into test array that amount of times
