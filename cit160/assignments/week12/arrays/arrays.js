@@ -30,19 +30,23 @@ function getMiddle(arr){
     return (arr.length%2>0) ? arr[(arr.length-1)/2] : (arr[(arr.length/2)-1]+arr[arr.length/2])/2;
 }
 
-//Function for dynamically generating three test arrays
 function generateTests(){
     let output = [];
-    //Length of a test array should be at least 3, but no more than 10.
+    //Length of a test array should be at least 3, but no more than 7.
     let minLn = 3, maxLn = 7;
+    //Count of tests to generate
+    let countOfTests = 3;
     //Start Generating Tests
-    for(let i = 0; i < 3 ; i++){ //Generate an array X number of times. In this case 3.
+    for(let i = 0; i < countOfTests ; i++){
         let test = [];
         let testLn = Math.floor(Math.random() * (maxLn - minLn) + minLn); 
+        //Build test array
         for (let n = 0; n <= testLn ; n++){
+            //Push randomly generated number into test array
             test.push(Math.floor(Math.random() * 10)); 
         }
-        output.push(test); //Push the newly generated array to the overall output
+        //Push test array into output array
+        output.push(test);
     }
-    return output; //Return the output of arrays
+    return output;
 }
