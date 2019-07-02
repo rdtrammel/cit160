@@ -2,32 +2,32 @@ document.getElementById('currentdate').innerHTML = new Date().toLocaleDateString
 
 function runTests(){ //Runs on button click
     let output = "";
+    //generateTests returns an array of arrays
     generateTests().forEach((test)=>{
         output += 
         `<tr>
-            <td>[${test.toString()}]</td>
+            <td>[${test}]</td>
             <td>${getMiddle(test)}</td>
             <td>${addEnds(test)}</td>
         </tr>`;
     });
-    
+
     document.getElementById('output').innerHTML = 
     `<table class="results">
         <tr>
             <th>Tests</th>
-            <th>getMiddle</th>
-            <th>addEnds</th>
+            <th>getMiddle(arr)</th>
+            <th>addEnds(arr)</th>
         </tr>
         ${output}
     </table><br>`;
 }
 
-function addEnds(arr){ //returns the sum of the first and last values in an array
-    return parseFloat(arr[0]) + parseFloat(arr[arr.length -1]);
-}
+function addEnds(arr){ return arr[0] + arr[arr.length -1] }
 
-function getMiddle(arr){ //If odd, get the middle value : If even, get average of middle values
-    return (arr.length%2>0) ? arr[(arr.length-1)/2] : (arr[(arr.length/2)-1]+ arr[arr.length/2])/2;
+function getMiddle(arr){ 
+    //If odd, get the middle value : If even, get average of middle values
+    return (arr.length%2>0) ? arr[(arr.length-1)/2] : (arr[(arr.length/2)-1]+arr[arr.length/2])/2;
 }
 
 //Function for dynamically generating three test arrays
