@@ -35,7 +35,7 @@ function getMiddle(arr){
 }
 
 function generateTests(count){
-    let output = [];
+    let output = []; //Create array to store each test array
     let countOfTests = count || 3; //If no number is specified, default to 3
     let minLn = 3, maxLn = 7; //Set min and max length for each test array
     //Generate Individual Tests
