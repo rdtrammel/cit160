@@ -31,18 +31,18 @@ function getMiddle(arr){
 }
 
 //Function for dynamically generating three test arrays
-function generateTests(){ //Returns an array of randomly generated arrays
+function generateTests(){
     let output = [];
-    let maxLn = 7, minLn = 3; 
+    //Length of a test array should be at least 3, but no more than 10.
+    let minLn = 3, maxLn = 7;
+    //Start Generating Tests
     for(let i = 0; i < 3 ; i++){ //Generate an array X number of times. In this case 3.
-        let arr = [];
-        //Length of an array should at least be 3, but no more than 10.
-        let arrLn = Math.floor(Math.random() * (maxLn - minLn) + minLn); 
-        for (let n = 0; n <= arrLn ; n++){
-            //Generate number between 0 and 10 and push it into the array.
-            arr.push(Math.floor(Math.random() * 10)); 
+        let test = [];
+        let testLn = Math.floor(Math.random() * (maxLn - minLn) + minLn); 
+        for (let n = 0; n <= testLn ; n++){
+            test.push(Math.floor(Math.random() * 10)); 
         }
-        output.push(arr); //Push the newly generated array to the overall output
+        output.push(test); //Push the newly generated array to the overall output
     }
     return output; //Return the output of arrays
 }
