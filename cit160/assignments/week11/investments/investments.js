@@ -14,7 +14,7 @@ function doFV(){
     let rate = parseFloat(document.getElementById("rate").value);
     let years = parseInt(document.getElementById("years").value);
     let periods = parseInt(document.getElementById("periods").value);
-    document.getElementById("output").value = '$' + computeFutureValue(principal, rate , years, periods);
+    document.getElementById("output").value = '$' + computeFutureValue(principal,rate,years,periods).toFixed(2);
 
 }
 /*
@@ -31,6 +31,5 @@ function doFV(){
 function computeFutureValue(principal, annualRate, years, periodsPerYear){
     let periodRate = annualRate/periodsPerYear;
     let totalPeriods = periodsPerYear*years;
-    let f = principal * Math.pow((1 + periodRate), totalPeriods);
-    return f.toFixed(2);
+    return principal * Math.pow((1 + periodRate), totalPeriods);
 }
