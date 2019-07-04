@@ -5,6 +5,7 @@ function doTests(count){
     let output = "";
     //Generate Tests with optional param to specify a number of tests to generate
     generateTests(count).forEach((test)=>{
+        //Output each test to a new table row
         output += 
         `<tr>
             <td>[${test}]</td>
