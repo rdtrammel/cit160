@@ -1,0 +1,23 @@
+table.results{
+    border:0;
+    border-collapse:collapse;
+}
+
+.results tr{
+    background-color:#BBB;
+}
+
+.results td:first-child,
+.results th:first-child{
+    text-align:left;
+}
+.results th{
+    border:1px solid #BBB;
+    padding: 5px;
+    background:#333;
+    color:#FFF;
+}
+.results td{
+    border: 2px solid #999;
+    padding:.5em;
+}
