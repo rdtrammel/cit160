@@ -3,9 +3,10 @@ document.getElementById('currentdate').innerHTML = new Date().toLocaleDateString
 function countEvens(list) {
     //count and return the number of 'even' integers in an array
     let count = 0;
-    for (let i = 0; i < list.length; i++) {
+    list.forEach(num=>{ if(num%2==0)count++; });
+    /*for (let i = 0; i < list.length; i++) {
         if (list[i] % 2 === 0) count++;
-    }
+    }*/
     return count;
 }
 
@@ -18,11 +19,13 @@ function doTests(count) {
     let output = "";
     generateTestArrays(count).forEach(test => {
         let multiplier = randomNumber(10, 1);
+        let evenCt = countEvens(test);
+        evenCt = evenCt == 1 ? `${evenCt} is Even` : `${evenCt} are Even`;
         output +=
             `<tr>
                 <td>[${test}]</td>
                 <td>Multiplier(${multiplier}) [${multiply(test, multiplier)}]</td>
-                <td>${countEvens(test)} Evens</td>
+                <td>${evenCt}</td>
             </tr>`;
     });
     document.getElementById('output').innerHTML =
