@@ -1,7 +1,7 @@
 document.getElementById('currentdate').innerHTML = new Date().toLocaleDateString();
 
 function countEvens(list) {
-    //counts and returns the number of even integers in an array
+    //count and return the number of 'even' integers in an array
     let count = 0;
     for (let i = 0; i < list.length; i++) {
         if (list[i] % 2 === 0) count++;
@@ -11,9 +11,7 @@ function countEvens(list) {
 
 function multiply(list, multiplier) {
     //multiply each item in the array by a given multiplier
-    return list.map(x => {
-        return x *= multiplier
-    });
+    return list.map(x=>{ return x *= multiplier });
 }
 
 function doTests(count) {
@@ -35,7 +33,7 @@ function doTests(count) {
             <th>multiply(list, multiplier)</th>
         </tr>
         ${output}
-    </table><br>`;
+        </table><br>`;
 }
 
 function generateTestArrays(count) {
