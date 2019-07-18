@@ -20,17 +20,17 @@ function doTests(count) {
         let multiplier = randomNumber(10, 1);
         output +=
             `<tr>
-            <td>[${test}]</td>
-            <td>${countEvens(test)}</td>
-            <td>Multiplier(${multiplier}) [${multiply(test, multiplier)}]</td>
-        </tr>`;
+                <td>[${test}]</td>
+                <td>Multiplier(${multiplier}) [${multiply(test, multiplier)}]</td>
+                <td>${countEvens(test)} Evens</td>
+            </tr>`;
     });
     document.getElementById('output').innerHTML =
         `<table class="results">
         <tr>
             <th>Tests</th>
-            <th>countEvens(list)</th>
             <th>multiply(list, multiplier)</th>
+            <th>countEvens(list)</th>           
         </tr>
         ${output}
         </table><br>`;
