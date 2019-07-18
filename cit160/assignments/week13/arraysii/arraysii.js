@@ -30,12 +30,12 @@ function doTests(count) {
     });
     document.getElementById('output').innerHTML =
         `<table class="results">
-        <tr>
-            <th>Tests</th>
-            <th>multiply(list, multiplier)</th>
-            <th>countEvens(list)</th>           
-        </tr>
-        ${output}
+            <tr>
+                <th>Tests</th>
+                <th>multiply(list, multiplier)</th>
+                <th>countEvens(list)</th>           
+            </tr>
+            ${output}
         </table><br>`;
 }
 
