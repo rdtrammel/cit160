@@ -24,7 +24,7 @@ function doTests(count) {
         output +=
             `<tr>
                 <td>[${test}]</td>
-                <td>Multiplier(${multiplier}) [${multiply(test, multiplier)}]</td>
+                <td>multiply(test,${multiplier}) [${multiply(test, multiplier)}]</td>
                 <td>${evenCt}</td>
             </tr>`;
     });
