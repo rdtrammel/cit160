@@ -4,9 +4,6 @@ function countEvens(list) {
     //count and return the number of 'even' integers in an array
     let count = 0;
     list.forEach(num=>{ if(num%2==0)count++; });
-    /*for (let i = 0; i < list.length; i++) {
-        if (list[i] % 2 === 0) count++;
-    }*/
     return count;
 }
 
