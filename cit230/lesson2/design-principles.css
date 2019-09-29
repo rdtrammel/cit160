@@ -17,7 +17,7 @@ header{
 }
 
 main{
-    background-color:#F7F7F7;
+    background-color:lightgray;
     display:grid;
     max-width:900px;
     margin:auto;
