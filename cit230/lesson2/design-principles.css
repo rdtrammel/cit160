@@ -8,6 +8,10 @@ body, header, h1, h2, h3, p{
     transition: all .3s;
 }
 
+body{
+    background-color:lightgray;
+}
+
 header{
     padding:2em;
     background-color:#FFF;
@@ -17,7 +21,6 @@ header{
 }
 
 main{
-    background-color:lightgray;
     display:grid;
     max-width:900px;
     margin:auto;
