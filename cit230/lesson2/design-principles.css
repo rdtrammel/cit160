@@ -10,13 +10,14 @@ body, header, h1, h2, h3, p{
 
 header{
     padding:2em;
-    background-color:grey;
+    background-color:#FFF;
     text-align:center;
     border-bottom:1px solid darkgray;
     transition: all .3s;
 }
 
 main{
+    backround-color:#F7F7F7;
     display:grid;
     max-width:900px;
     margin:auto;
@@ -25,6 +26,7 @@ main{
 }
 
 main section{
+    background-color:#FFF;
     border:1px solid lightgray;
     border-radius: 5px;
     margin:.2em;
@@ -69,7 +71,7 @@ main section a {
     }
 }
 
-/* Mobile Views */
+/* Desktop Views */
 @media only screen and (min-width:60em){
     main{
         grid-template-columns: 1fr 1fr 1fr;
