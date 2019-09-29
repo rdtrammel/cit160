@@ -12,7 +12,6 @@ header{
     background-color:rgba(255,255,255,.95);
     position:relative;
     border-bottom:1px solid lightseagreen;
-    height:120px;
     transition: all .3s;
 }
 
@@ -26,19 +25,31 @@ header{
     cursor:pointer;
 }
 
+.sticky .header-content{
+    color:#000;
+    position:relative;
+    margin:auto;
+    text-align:left;
+    max-width:900px;
+    padding:20px;
+    line-height: 1.5;
+}
+
 .sticky h1, .sticky h2{
     position:relative;
     top: -5px;
     display:block;
     margin:0;
     padding:0 .2em 0em .2em;
-    font-size:16pt;
+    font-size:10pt;
     transition: all .3s;
 }
 
 .sticky .profile-container{
+    position:absolute;
     top: 10px;
-    height:65px;
+    right: 5px;
+    width:50px;
     transition: all .3s;
 }
 
@@ -54,7 +65,7 @@ header{
 
 .augment-top{
     position:relative;
-    margin-top: 110px;
+    margin-top: 250px;
     transition: all .3s;
 }
 
@@ -62,25 +73,24 @@ header{
     color:#000;
     position:relative;
     margin:auto;
+    text-align:center;
     max-width:900px;
     padding:20px;
     line-height: 1.5;
+    transition: all .3s;
 }
 
 .profile-container{
-    position: absolute;
+    margin:auto;
     border-radius:3px;
     top:10%;
-    right:5px;
-    height:100px;
-    width:100px;
+    width:200px;
     overflow:hidden;
     transition: height .3s;
 }
 
 .profile-container img{
-    position:absolute;
-    height: 100%;
+    width: 100%;
 }
 
 .assignment-content{
@@ -193,4 +203,73 @@ footer h2 a:hover{
 
 .small-text{
     font-size:12pt;
+}
+
+
+/* Tablet and up */
+@media only screen and (min-width:32em){
+
+    .profile-container{
+        position:absolute;
+        right:5px;
+        height:100px;
+        width:100px;
+        overflow:hidden;
+        transition: height .3s;
+    }
+    
+    .profile-container img{
+        height: 100%;
+    }
+
+    header{
+        position:relative;
+        height:120px;
+    }
+
+    .header-content{
+        color:#000;
+        position:relative;
+        margin:auto;
+        text-align:left;
+        max-width:900px;
+        padding:20px;
+        line-height: 1.5;
+    }
+    
+    .sticky{
+        height:80px;
+        width:100%;
+        transition:all .3s;
+        position:fixed;
+        top:0;
+        z-index:2;
+        cursor:pointer;
+    }
+    
+    .sticky h1, .sticky h2{
+        position:relative;
+        top: -5px;
+        display:block;
+        margin:0;
+        padding:0 .2em 0em .2em;
+        font-size:14pt;
+        transition: all .3s;
+    }
+    
+    .sticky .profile-container{
+        width:60px;
+        transition: all .3s;
+    }
+    
+    .sticky .main-content{
+        margin-top:70px;
+    }
+
+    .augment-top{
+        position:relative;
+        margin-top: 110px;
+        transition: all .3s;
+    }
+
 }
