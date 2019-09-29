@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300');
+
+body, header, h1, h2, h3, p{
+    display:block;
+    margin:0;
+    padding:0;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    transition: all .3s;
+}
+
+header{
+    padding:2em;
+    background-color:grey;
+    text-align:center;
+    border-bottom:1px solid darkgray;
+    transition: all .3s;
+}
+
+main{
+    display:grid;
+    max-width:900px;
+    margin:auto;
+    transition: all .3s;
+	grid-template-columns: 1fr;
+}
+
+main section{
+    border:1px solid lightgray;
+    border-radius: 5px;
+    margin:.2em;
+    overflow: hidden;
+}
+
+main section h3{
+    background-color:#2F404C;
+    border-radius: 5px 5px 0 0;
+    color:#FFF;
+    font-size:.9em;
+    text-align:center;
+    padding:1em;
+}
+
+main section .content, main section h4{
+    padding:.5em;
+}
+
+main section p {
+    padding:1em;
+    text-align: center;
+}
+
+main section img{
+    border: 1px solid lightgray;
+    width:100%;
+}
+
+main section a {
+    text-decoration:none;
+}
+
+/* Tablet views */
+@media only screen and (min-width:37.5em){
+    main{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    section:nth-child(3){
+        grid-column:span 2;
+    }
+}
+
+/* Mobile Views */
+@media only screen and (min-width:60em){
+    main{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    section:nth-child(3){
+        grid-column:span 1;
+    }
+}
