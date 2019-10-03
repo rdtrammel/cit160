@@ -5,6 +5,7 @@
 .instructions{
     background-color: lightgoldenrodyellow;
     border:1px solid lightgray;
+    margin:1em;
     padding:.5em;
     font-size:10pt;
 }
@@ -56,4 +57,24 @@ nav{
 
 .img-container img{
     width:100%;
+}
+
+main section {
+    background-color: #fff;
+    padding: .4em;
+}
+
+main section h2{
+    border-bottom: 1px solid slategray;
+    color:lightslategrey;
+    padding:.5em;
+}
+
+main section ol li{
+    padding:.5em;
+}
+
+.personas{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
