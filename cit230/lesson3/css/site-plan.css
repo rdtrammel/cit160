@@ -29,7 +29,7 @@ nav{
     display:flex;
 }
 
-/* grid-template-columns are controlled by javascript */
+/* grid-template-columns for nav are controlled by javascript */
 .site-nav{
     margin:auto;
     padding:0;
@@ -94,12 +94,7 @@ main section ol li{
     grid-template-columns: repeat(2, 1fr);
 }
 
-#name .content{
-    display:grid;
-    grid-template-columns: 1fr 1fr;
-}
-
-#logo .content{
+.content{
     display:grid;
     grid-template-columns: 1fr 1fr;
 }
