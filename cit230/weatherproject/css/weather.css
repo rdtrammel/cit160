@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300');
+
+header{
+    overflow: hidden;
+}
+
+.sunrise-container{
+    position:absolute;
+    align-items:center;
+    justify-content:center;
+    background:darkorange;
+    min-height:500px;
+    width:100%;
+    overflow: hidden;
+    transition: all 2s;
+}
+
+.sunrise-sun{
+    position: relative;
+    margin:auto;
+    border-radius:50%;
+    top:450px;
+    width:100px;
+    height:100px;
+    background-color: darkred;
+    transition: all ease-in-out 1s;
+}
+
+.sunrise-weather{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+    margin:auto;
+    height:300px;
+    overflow:hidden;
+}
+
+.sunrise-weather img{
+    position:absolute;
+    margin: 0 auto;
+    height:100%;
+}
+
+.sunrise-weather span{
+    position:absolute;
+    bottom:0px;
+}
+
+
+.sunrise-ground{
+    position:absolute;
+    bottom:-25px;
+    border-radius:50%;
+    background-color:darkgreen;
+    width:100%;
+    height:50px;
+    transition: all ease-in-out 1s;
+}
+
+.sunrise-person{
+    position:relative;
+    margin:auto;
+    border-radius:50%;
+    background-color:black;
+    width:5px;
+    height:10px;
+    top:100px;
+}
+
+.sunrise-suntop{
+    background:lightsalmon;
+    top:-50px;
+    height:70px;
+    width:70px;
+    transition: all ease-in-out 1s;
+}
+
+.sunrise-containerup{
+    background-color:white;
+    transition: all ease-out 1s;
+}
+
+.ground-day{
+    background-color: lightgreen;
+    transition: all ease-in-out 1s;
+}
+
+.temp{
+    position:relative;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-size: 48pt;
+    right:40%;
+}
+
+button{
+    position:relative;
+}

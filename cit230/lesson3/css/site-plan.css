@@ -92,6 +92,7 @@ main section ol li{
 .personas{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
 }
 
 .content{
@@ -100,5 +101,5 @@ main section ol li{
 }
 
 #logo .img-container{
-    width:200px;
+    width:300px;
 }
