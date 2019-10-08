@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+        <meta name="description" content="">
+        <link rel="icon" type="image/svg" src="#">
+        <link rel="stylesheet" href="../css/normalize.css">
+        <link rel="stylesheet" href="css/small.css">
+        <link rel="stylesheet" href="css/medium.css">
+        <link rel="stylesheet" href="css/large.css">
+        <title>CIT 230 - Front-End Web Development - Responsive Nav Exercise - Robert Trammel</title>
+    </head>
+    <body>
+        <header class="clearfix">
+            <picture>
+                <source srcset="/images/day.svg" type="image/svg">
+                <img rel="image/svg" src="images/day.svg" alt="weather logo">
+            </picture>
+            <div class="title">
+                <h2>The Weather Site</h2>
+                <h3>We love you</h3>
+            </div>
+        </header>
+        <nav class="clearfix">
+            <button onclick="toggleMenu()">&#9776;</button>
+            <ul id="primary-nav" class="hide">
+                <li class="active"><a href="#">Navigation Menu Items</a></li>
+            </ul>
+        </nav>
+        <main>
+            <h1>Preston Idaho</h1>
+        </main>
+        <script type="text/javascript" src="js/preston-4.js"></script>
+    </body>
+</html>
