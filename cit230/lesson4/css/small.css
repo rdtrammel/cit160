@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300');
 
+:root{
+    --content-width: 960px;
+}
+
 body, h1, h2, h3, picture {
     font-family:'Montserrat', Arial, Helvetica, sans-serif;
     margin:0;
@@ -91,18 +95,17 @@ header picture img{
 main {
     position:relative;
     margin:auto;
-    max-width:960px;
+    max-width: var(--content-width);
     background-color: rgba(0,255,255, 0.1);
 }
 
 .hero-article{
     position: absolute;
-    background:linear-gradient(rgba(0,0,0,0), rgba(255,255,255,.9));
+    background:linear-gradient(rgba(255,255,255,0.5), #fff);
     padding: 1em;
     left: 4rem;
     top: 9.5rem;
     width: 15em;
-    height: 10em;
 }
 
 .temperature {
@@ -112,15 +115,12 @@ main {
     text-align:center;
 }
 
-.hero-section{
-    height: 400px;
-}
-.hero-section .hero-article p{
+main .hero-section .hero-article p{
     font-size:12pt;
 }
 
-.editorial{
-    position: relative;
+main .editorial{
+    position:relative;
     border-top: 1px solid lightgray;
     border-bottom: 1px solid lightgray;
     margin: 5rem auto;
@@ -128,6 +128,49 @@ main {
     background-color: #F7F7F7;
 }
 
+main .editorial p{
+    font-size:.75rem;
+    line-height:1.5;
+}
+
+footer{
+    padding:0;
+    color: #fff;
+    border-top: 2px solid darkgray;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    background-color:slategray;
+    width:100%;
+}
+
+footer a{
+    text-decoration:none;
+    color:blue;
+}
+
+footer a:hover{
+    color: lightsteelblue;
+    cursor:pointer;
+}
+
+footer .img-container{
+    margin:auto;
+}
+footer .contact-info{
+    max-width: var(--content-width);
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin:auto; 
+}
+
+.contact-info p{
+    padding:1rem;
+}
+
+.footer-bar{
+    text-align:center;
+    padding: 3em;
+}
 
 
 /* Clearfix */
