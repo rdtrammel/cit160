@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="description" content="">
+    <link rel="icon" type="image/svg" src="#">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="css/small.css">
+    <link rel="stylesheet" href="css/medium.css">
+    <link rel="stylesheet" href="css/large.css">
+    <title>CIT 230 - Front-End Web Development - Responsive Nav Exercise - Robert Trammel</title>
+</head>
+
+<body>
+    <header class="clearfix">
+        <picture>
+            <source srcset="/images/day.svg" type="image/svg">
+            <img rel="image/svg" src="images/day.svg" alt="weather logo">
+        </picture>
+        <div class="title">
+            <h1>The Weather Site</h1>
+            <h3>We love you</h3>
+        </div>
+    </header>
+    <nav class="clearfix">
+        <button onclick="toggleMenu()">&#9776;</button>
+        <ul id="site-nav" class="hide"></ul>
+    </nav>
+    <main>
+        <section class="hero-section">
+            <h2 class="city-name">Preston Idaho</h2>
+            <article class="hero-information">
+                <h2>Weather Summary</h2>
+                <div class="temperature">72&#8451;</div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+            </article>
+            <div class="img-container">
+                <img src="images/4k-wallpaper-clouds-cropland-842711.jpg" alt="Hero image of Preston Idaho">
+            </div>
+            </sect>
+            <section class="editorial">
+                <article>
+                    <h2>Article Title</h2>
+                    <h4>by author</h4>
+                    <picture class="clearfix">
+                        <img src="images/beauty-in-nature-bench-best-friends-2645707.jpg" alt="picture of preston idaho road sign">
+                    </picture>
+                    <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
+                        classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a
+                        Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin
+                        words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in
+                        classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32
+                        and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero,
+                        written in 45 BC. This book is a treatise on the theory of ethics, very popular during the
+                        Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in
+                        section 1.10.32. The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for
+                        those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero
+                        are also reproduced in their exact original form, accompanied by English versions from the 1914
+                        translation by H. Rackham.</p>
+                </article>
+                
+            </section>
+    </main>
+    <footer>
+        <div class="contact-info">
+            <p>
+                Robert Trammel<br>
+                e: <a href="mailto:rd.trammel@gmail.com?subject=We think you're awesome"
+                    target="_blank">rd.trammel@gmail.com</a><br>
+                p: <a href="tel:12102684308" target="_blank">(210) 268-4308</a>
+            </p>
+            <p>
+                WeatherAboveGround<br>
+                Because we love you
+            </p>
+        </div>
+        
+        </div>
+        <div class="img-container">
+            <img src="images/clear-sky-clouds-country-691919.jpg" alt="Company logo and image">
+        </div>
+        <section class="footer-bar">
+            Robert Trammel | WeatherAboveGround&copy; | <span id="today"></span>
+        </section>
+    </footer>
+    <script type="text/javascript" src="js/preston-5.js"></script>
+</body>
+
+</html>
