@@ -27,4 +27,22 @@
         padding: auto 2%;
     }
 
+    #five-day-forecast{
+        display:grid;
+        margin-top: -8em;
+    }
+
+    .forecast-day{
+        background-color: #FFF;
+        border-radius:.5em;
+        box-shadow:0 0 10px var(--accent-main);
+        margin:1em;
+        padding:1em;
+    }
+
+    .forecast-day img{
+        margin-top:2em;
+        width:50%;
+    }
+
 }

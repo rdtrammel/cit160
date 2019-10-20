@@ -3,9 +3,9 @@
 :root{
     --header-nav-color1: #4686AA;
     --header-nav-color2: #095048;
-    --button-main: #DB8E54;
-    --button-hover: #DBA175;
-    --button-press: #813F0E;
+    --accent-main: #DB8E54;
+    --accent-hover: #DBA175;
+    --accent-press: #813F0E;
     --content-width: 960px;
 }
 
@@ -15,17 +15,20 @@ body, h1, h2, h3, picture {
     padding:0;
 }
 
-nav button{
-    margin: .2rem 2%;
-    background-color: transparent;
-    border: none;
-    font-size: 1.6rem;
-    color: rgba(255,255,255,0.9);
-}
+
 
 nav{
     background: linear-gradient(var(--header-nav-color1),var(--header-nav-color2));
     font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+
+nav button{
+    display:block;
+    margin: .2rem auto;
+    background-color: transparent;
+    border: none;
+    font-size: 1.6rem;
+    color: rgba(255,255,255,0.9);
 }
 
 nav ul {
@@ -86,14 +89,13 @@ header picture img{
 }
 
 .img-container{
-    box-shadow: 0px 0px 15px rgba(0,0,0,.8);
-    border-radius:.2rem;
-    margin:1rem;
-    max-height:300px;
-    overflow:hidden;
+    max-height:400px;
+    overflow: hidden;
 }
 
 .img-container img{
+    border-radius:.2rem;
+    box-shadow: 0px 0px 15px rgba(0,0,0,.8);
     width:100%;
 }
 
@@ -101,26 +103,38 @@ main {
     position:relative;
     margin:auto;
     max-width: var(--content-width);
-    background-color: rgba(0,255,255, 0.1);
 }
 
-.hero-information{
+.weather-summary{
     position: absolute;
     background:linear-gradient(rgba(255,255,255,0.5), #fff);
     padding: 1em;
-    left: 4rem;
-    top: 9.5rem;
+    left: 2rem;
+    top:5em;
     max-width: 15em;
 }
 
-.temperature {
+#five-day-forecast{
+    display:none;
+}
+
+.forecast-day{
+    text-align:center;
+}
+
+.forecast-day img{
+    width: 100%;
+}
+
+#summary-data {
     padding:1em;
-    font-size:24pt;
+    font-size:16pt;
+    line-height:1.5;
     display:block;
     text-align:center;
 }
 
-main .hero-section .hero-information p{
+main .hero-section .weather-summary p{
     font-size:12pt;
 }
 
@@ -128,13 +142,13 @@ main .hero-section .hero-information p{
     position:relative;
     border-top: 1px solid lightgray;
     border-bottom: 1px solid lightgray;
-    margin: 5rem auto;
+    margin: auto;
     padding: 1rem;
     background-color: #F7F7F7;
 }
 
 .editorial p{
-    font-size:.75rem;
+    font-size:1rem;
     line-height:1.5;
 }
 
@@ -146,9 +160,8 @@ footer{
     padding:0;
     color: #fff;
     border-top: 2px solid darkgray;
-    display: grid;
-    grid-template-rows: repeat(2, 1fr);
     background-color:slategray;
+    text-align:center;
 }
 
 footer a{
@@ -162,18 +175,22 @@ footer a:hover{
     cursor:pointer;
 }
 
-footer .img-container{
-    margin:auto;
+footer picture{
+    overflow:hidden;
+    width:100%;
 }
-footer .contact-info{
-    max-width: var(--content-width);
-    display:grid;
-    grid-template-columns: repeat(2, 1fr);
-    margin:auto; 
+
+footer picture img{
+    box-shadow: 0px 0px 15px rgba(0,0,0,.8);
+    width:100%;
 }
 
 .contact-info p{
     padding:1rem;
+}
+
+.contact-info picture img{
+    max-width: 500px;
 }
 
 .footer-bar{
