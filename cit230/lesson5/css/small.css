@@ -198,6 +198,10 @@ footer picture img{
     padding:1rem;
 }
 
+.contact-info picture{
+    display: none;
+}
+
 .contact-info picture img{
     max-width: 500px;
 }
