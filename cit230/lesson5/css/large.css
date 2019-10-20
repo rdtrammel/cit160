@@ -29,7 +29,6 @@
 
     #five-day-forecast{
         display:grid;
-        margin-top: -8em;
     }
 
     .forecast-day{
