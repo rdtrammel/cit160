@@ -16,6 +16,8 @@ body, h1, h2, h3, picture {
 }
 
 #promo-banner{
+    display:none;
+    background-color: yellow;
     border-bottom: 1px solid var(--accent-dark);
     padding:1em;
 }
@@ -203,10 +205,6 @@ footer picture img{
 .footer-bar{
     text-align:center;
     padding: 3em;
-}
-
-.hidden{
-    display:none;
 }
 
 /* Clearfix */

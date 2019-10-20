@@ -1,14 +1,13 @@
+//Display Promo Banner on Saturdays
+if(new Date().getDay() === 5){
+    document.getElementById("promo-banner").style.display = "block";
+}
+
+//Set Summary Data
 let summaryData = {
     "temp" : "72",
     "conditions" : "Cloudy"
 }
-
-//Display Promo Banner on Saturdays
-if(new Date().getDay === 5){
-    document.getElementById("promo-banner").classList.remove("hidden");
-}
-
-//Set Summary Data
 document.getElementById("summary-data").innerHTML = 
 `${summaryData.temp} &#8451;<br>
 ${summaryData.conditions}`;
