@@ -69,7 +69,6 @@ nav ul.hide{
 }
 
 header{
-    padding:0;
     display:flex;
     background-color: var(--header-color);
     align-items: center;
@@ -125,6 +124,7 @@ main {
 
 #five-day-forecast{
     display:none;
+    margin:2em auto;
 }
 
 .forecast-day{
