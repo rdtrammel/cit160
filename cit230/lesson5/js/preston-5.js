@@ -3,6 +3,11 @@ let summaryData = {
     "conditions" : "Cloudy"
 }
 
+//Display Promo Banner on Saturdays
+if(new Date().getDay === 5){
+    document.getElementById("promo-banner").classList.remove("hidden");
+}
+
 //Set Summary Data
 document.getElementById("summary-data").innerHTML = 
 `${summaryData.temp} &#8451;<br>

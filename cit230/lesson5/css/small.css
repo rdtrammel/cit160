@@ -4,8 +4,8 @@
     --header-nav-color1: #4686AA;
     --header-nav-color2: #095048;
     --accent-main: #DB8E54;
-    --accent-hover: #DBA175;
-    --accent-press: #813F0E;
+    --accent-light: #DBA175;
+    --accent-dark: #813F0E;
     --content-width: 960px;
 }
 
@@ -15,7 +15,10 @@ body, h1, h2, h3, picture {
     padding:0;
 }
 
-
+#promo-banner{
+    border-bottom: 1px solid var(--accent-dark);
+    padding:1em;
+}
 
 nav{
     background: linear-gradient(var(--header-nav-color1),var(--header-nav-color2));
@@ -29,6 +32,10 @@ nav button{
     border: none;
     font-size: 1.6rem;
     color: rgba(255,255,255,0.9);
+}
+
+nav button:hover{
+    cursor:pointer;
 }
 
 nav ul {
@@ -172,7 +179,7 @@ footer a{
 
 footer a:hover{
     color: lightsteelblue;
-    cursor:pointer;
+    cursor: pointer;
 }
 
 footer picture{
@@ -198,6 +205,9 @@ footer picture img{
     padding: 3em;
 }
 
+.hidden{
+    display:none;
+}
 
 /* Clearfix */
 .clearfix:after{

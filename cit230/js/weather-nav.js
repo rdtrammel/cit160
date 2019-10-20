@@ -21,7 +21,9 @@ function renderNav(){
         navButtons += location.pathname.match(regEx) ? `<li class="active"><a href="#">${key}</a></li>\n` : `<li><a href="${sitePages[key]}">${key}</a></li>\n`;
     }
     siteNavEl.innerHTML = navButtons;
-    function toggleMenu(){
-        siteNavEl.classList.toggle("hide");
-    }
+}
+
+function toggleMenu(){
+    let siteNavEl = document.getElementById("site-nav");
+    siteNavEl.classList.toggle("hide");
 }
