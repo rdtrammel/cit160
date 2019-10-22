@@ -154,12 +154,19 @@ main .hero-section .weather-summary p{
     margin: auto;
     padding: 1rem;
     background-color: #F7F7F7;
+    overflow: hidden;
 }
 
 .editorial p{
     font-size:1rem;
     line-height:1.5;
 }
+
+.editorial .article-content{
+    display: grid;
+    overflow: hidden;
+}
+
 
 .editorial picture img{
     width: 100%;
@@ -186,7 +193,6 @@ footer a:hover{
 
 footer picture{
     overflow:hidden;
-    width:100%;
 }
 
 footer picture img{

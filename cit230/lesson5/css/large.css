@@ -48,4 +48,29 @@
         display: block;
     }
 
+    .editorial .article-content{
+        height:100%;
+        padding-top: 5.5em;
+        top:0;
+        right: 1em;
+        position: absolute;
+        grid-template-columns:1fr 1fr;
+
+    }
+
+    .editorial .article-content p {
+        background-color: rgba(255,255,255,.6); 
+        padding: 1em;  
+        height: 100%;
+        order:1;        
+    }
+
+    .editorial .article-content picture{
+        order:1;
+    }
+
+    .editorial .article-content picture img{
+        width: '';
+        height:100%;
+    }
 }
