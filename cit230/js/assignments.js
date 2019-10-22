@@ -47,3 +47,11 @@ function setWidthListeners(){
         footerLabel.classList.remove("small-text");
     }
 }
+
+WebFont.load({
+    google: {
+        families: [
+            'Montserrat:300,400'
+        ]
+    }
+})
