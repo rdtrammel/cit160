@@ -1,15 +1,14 @@
-/* Set Site Navigation Elements here */
-// page name : path
-var sitePages = {
+//I did this so that if we need to add nav elements, I can just do it here and it will flow to other pages where nav is used.
+// { pageName : link }
+let sitePages = {
     "Home" : "#",
-    "Preston" : "preston-5.html",
+    "Preston" : "preston-6.html",
     "Soda Springs" : "#",
     "Fish Haven" : "#",
     "Storm Center" : "#",
     "Gallery" : "#"
-}
+};
 
-//Render the navigation elements
 function renderNav(){
     let siteNavEl = document.getElementById("site-nav");
     siteNavEl.style.gridTemplateColumns = `repeat(${Object.keys(sitePages).length}, 1fr)`;

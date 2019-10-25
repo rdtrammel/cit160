@@ -54,4 +54,4 @@ WebFont.load({
             'Montserrat:300,400'
         ]
     }
-})
+});
