@@ -1,5 +1,7 @@
+renderNav(); // found at cit230/weatherAssets/js/weather-nav.js
+
 //Display Promo Banner on Saturdays
-if(new Date().getDay() === 5){
+if(new Date().getDay() === 6){
     document.getElementById("promo-banner").style.display = "block";
 }
 
@@ -10,10 +12,8 @@ let summaryData = {
 }
 document.getElementById("summary-data").innerHTML = `${summaryData.temp} &#8451;<br>${summaryData.conditions}`;
 
-renderNav(); // found at cit230/weatherAssets/js/weather-nav.js
-
-//5-Day forecast Data
-let forecastData = { 
+//Set 5-Day forecast Data
+render5DayForecast({ // found at cit230/weatherAssets/js/weather-5day.js
     "Monday" : {
         "condition" : "Sunny",
         "icon" : "../weatherAssets/images/sunny-icon.png",
@@ -45,6 +45,6 @@ let forecastData = {
         "temp" : 19,
         "windSpeed" : 10
     },
-};
+});
 
-render5DayForecast(forecastData); // found at cit230/weatherAssets/js/weather-5day.js
+

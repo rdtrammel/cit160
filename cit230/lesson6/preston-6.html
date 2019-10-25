@@ -10,10 +10,7 @@
     <link rel="stylesheet" href="../weatherAssets/css/small.css">
     <link rel="stylesheet" href="../weatherAssets/css/medium.css">
     <link rel="stylesheet" href="../weatherAssets/css/large.css">
-    <script src="../weatherAssets/js/windchill.js"></script>
-    <script src="../weatherAssets/js/weather-5day.js"></script>
-    <script src="../weatherAssets/js/weather-nav.js"></script>
-    <title>CIT 230 - Front-End Web Development - Responsive Nav Exercise - Robert Trammel</title>
+    <title>CIT 230 - Front-End Web Development - Weather Project - Robert Trammel</title>
 </head>
 
 <body>
@@ -26,8 +23,8 @@
             <img rel="image/svg" src="../weatherAssets/images/logo.svg" alt="weather logo">
         </picture>
         <div class="title">
-            <h1>The Weather Site</h1>
-            <h3>We love you</h3>
+            <h1>Weather Above Ground</h1>
+            <h3>Where else would it happen</h3>
         </div>
     </header>
     <nav class="clearfix">
@@ -44,7 +41,11 @@
                 <div id="summary-data"><!-- Set with Javascript --></div>
             </article>
             <div class="img-container">
-                <img src="../weatherAssets/images/preston-hillfarm-1200.jpg" alt="Hero image of Preston Idaho">
+                <picture>
+                    <source srcset="images/cit230_image_franklin_500.jpg" media="(max-width:400px)" type="image/jpeg">
+                    <source srcset="images/cit230_image_franklin_800.jpg" media="(max-width:700px)" type="image/jpeg">
+                    <img src="images/cit230_image_franklin_1200.jpg" alt="Hero image of Preston Idaho">
+                </picture>
             </div>
         </section>
         <section id="five-day-forecast"><!-- Set with Javascript --></section>
@@ -89,8 +90,11 @@
         <section class="footer-bar">
             Robert Trammel  &copy;WeatherAboveGround  <span id="today"></span>
         </section>
-    </footer> 
-    <script type="text/javascript" src="../weatherAssets/js/preston-6.js"></script>
+    </footer>
+    <script src="../weatherAssets/js/windchill.js"></script>
+    <script src="../weatherAssets/js/weather-nav.js"></script>
+    <script src="../weatherAssets/js/weather-5day.js"></script>
+    <script src="../weatherAssets/js/preston-6.js"></script>
 </body>
 
 </html>
