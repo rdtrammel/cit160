@@ -1,0 +1,14 @@
+.grid-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+}
+
+[data-img]{
+    border:1px solid pink;
+    min-width: 50px;
+    min-height: 50px;
+}
+
+img{
+    width:100%;
+}
