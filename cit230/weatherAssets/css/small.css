@@ -230,6 +230,7 @@ figure{
 
 .gallery-content{
     display: grid;
+    grid-auto-flow: row dense;
     grid-template-columns: 1fr;
 }
 
@@ -242,3 +243,14 @@ figure{
 .gallery-content img{
     width: 100%;
 }
+
+.gallery-content figcaption{
+    padding: .5em;
+}
+
+.gallery-content figure:hover{
+    cursor:pointer;
+    box-shadow: 0 0 20px 5px rgba(0,0,0,.3);
+    transition: box-shadow .2s ease-in-out;
+}
+
