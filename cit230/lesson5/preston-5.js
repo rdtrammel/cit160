@@ -10,7 +10,7 @@ let summaryData = {
 }
 document.getElementById("summary-data").innerHTML = `${summaryData.temp} &#8451;<br>${summaryData.conditions}`;
 
-renderNav(); // found at cit230/js/weather-nav.js
+setTopNavigation(); // found at cit230/js/weather-nav.js
 
 //5-Day forecast Data
 let forecastData = {  // found at cit230/js/weather-5day.js

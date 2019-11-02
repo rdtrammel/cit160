@@ -223,3 +223,22 @@ footer picture img{
     display: table;
     clear: both;
 }
+
+figure{
+    min-height: 5em;
+}
+
+.gallery-content{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.gallery-content [data-img]{
+    border:1px solid pink;
+    min-width: 50px;
+    min-height: 50px;
+}
+
+.gallery-content img{
+    width: 100%;
+}

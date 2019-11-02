@@ -1,5 +1,7 @@
 @media only screen and (min-width: 35em){
 
-    
+    .gallery-content{
+        grid-template-columns: repeat(2, 1fr);
+    }
 
 }

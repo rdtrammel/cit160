@@ -73,4 +73,9 @@
         width: '';
         height:100%;
     }
+
+    .gallery-content{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
 }

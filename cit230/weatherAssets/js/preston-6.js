@@ -1,4 +1,4 @@
-renderNav(); // found at cit230/weatherAssets/js/weather-nav.js
+setTopNavigation(); // found at cit230/weatherAssets/js/weather-nav.js
 
 WebFont.load({
     google: {

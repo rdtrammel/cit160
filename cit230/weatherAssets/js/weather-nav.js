@@ -2,14 +2,14 @@
 // { pageName : link }
 let sitePages = {
     "Home" : "#",
-    "Preston" : "preston-6.html",
+    "Preston" : "../lesson6/preston-6.html",
     "Soda Springs" : "#",
     "Fish Haven" : "#",
     "Storm Center" : "#",
-    "Gallery" : "#"
+    "Gallery" : "../lesson7/gallery-7.html"
 };
 
-function renderNav(){
+function setTopNavigation(){
     let siteNavEl = document.getElementById("site-nav");
     siteNavEl.style.gridTemplateColumns = `repeat(${Object.keys(sitePages).length}, 1fr)`;
 
@@ -17,7 +17,11 @@ function renderNav(){
     for (const key in sitePages) { 
         let buttonLink = sitePages[key];
         let regEx = new RegExp(buttonLink,'gi');
-        navButtons += location.pathname.match(regEx) ? `<li class="active"><a href="#">${key}</a></li>\n` : `<li><a href="${sitePages[key]}">${key}</a></li>\n`;
+        if(location.pathname.match(regEx)){
+            navButtons += `<li class="active"><a href="#">${key}</a></li>\n`
+        }else{
+            navButtons += `<li><a href="${sitePages[key]}">${key}</a></li>\n`;
+        }
     }
     siteNavEl.innerHTML = navButtons;
 }
