@@ -288,16 +288,14 @@ form input.submitBtn{
     color: #FFF;
     border-radius: .5rem;
     padding: 1.5rem 2rem;
-    margin: 0 0 2rem 1%;
+    margin: 0 0 2rem 2%;
+    width: 100%;
+    max-width: 20rem;
 }
 
 form input.submitBtn:hover{
     background-color: var(--accent-light);
     cursor: pointer;
-}
-
-form input.submitBtn:press{
-
 }
 
 form label.left input{
