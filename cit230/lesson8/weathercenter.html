@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>CIT 230 - Front-End Web Development - Weather Aboveground Gallery - Robert Trammel</title>
+    <meta name="description" content="Weather Gallery" >
+    <link rel="stylesheet" href="../weatherAssets/css/normalize.css">
+    <link rel="stylesheet" href="../weatherAssets/css/small.css">
+    <link rel="stylesheet" href="../weatherAssets/css/medium.css">
+    <link rel="stylesheet" href="../weatherAssets/css/large.css">
+</head>
+<body>
+    <div id="promo-banner" class="hidden">
+        <h2>Saturday = Preston Pancakes in the Park!  9:00 a.m. Saturday at the city park pavilion.</h2>
+    </div>
+    <!-- Header Content -->
+    <header class="clearfix">
+        <picture>
+            <source srcset="../weatherAssets/images/day.svg" type="image/svg">
+            <img rel="image/svg" src="../weatherAssets/images/logo.svg" alt="weather logo">
+        </picture>
+        <div class="title">
+            <h1>Weather Above Ground</h1>
+            <h3>Where else would it happen</h3>
+        </div>
+    </header>
+
+    <!-- Top Navigation -->
+    <nav class="clearfix">
+        <button onclick="toggleMenu()">&#9776; Menu</button>
+        <ul id="site-nav" class="hide"><!-- Set with Javascript--></ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <form>
+            <h1>Weather Center</h1>
+            <h2>What's happening where you are?</h2>
+            <fieldset>
+                <legend>Tell us who you are</legend>
+                <label>Full Name <input type="text" name="fullName" pattern="A-Za-z0-9[5]" required /></label>
+                <label>Email <input type="text" name="email" placeholder="your@email.com" /></label>
+                <label>Phone <input type="tel" name="phoneNumber" required /></label>
+                <label>Zip Code <input type="number" name="zipCode" required /></label>
+            </fieldset>
+            <fieldset>
+                <legend>Tell us what you see</legend>
+                <label>Storm Date <input type="date" name="stormDate" /></label>
+                <label>Storm Type <input list="stormTypes" name="stormType"></label>
+                <datalist id="stormTypes">
+                    <option value="Flash Flood"></option>
+                    <option value="Hail"></option>
+                    <option value="Hurricane"></option>
+                    <option value="Thunderstorm"></option>
+                    <option value="Tornado"></option>
+                </datalist>
+                <label>Storm Severity <input type="range" name="severity" min="1" max="10"></label>
+                <label>Storm Region 
+                    <select id="stormRegion">
+                        <option value="" disabled selected>Select Region...</option>
+                        <option value="Preston">Preston</option>
+                        <option value="Sugar City">Sugar City</option>
+                        <option value="Fish Haven">Fish Haven</option>
+                    </select>
+                </label>
+            </fieldset>
+            <fieldset>
+                <legend>Are you in danger?</legend>
+                <label><input type="radio" name="dangerLevel" value="yes">Yes</label>
+                <label><input type="radio" name="dangerLevel" value="no">No</label>
+                <label><input type="radio" name="dangerLevel" value="maybe">Maybe</label>
+            </fieldset>
+            <label><input type="button" value="Report My Experience"></label>
+        </form>
+    </main>
+    <!-- Footer -->
+    <footer>
+        <div class="contact-info">
+            <p>
+                Robert Trammel<br>
+                e: <a href="mailto:rd.trammel@gmail.com?subject=We think you're awesome"
+                    target="_blank">rd.trammel@gmail.com</a><br>
+                p: <a href="tel:12102684308" target="_blank">(210) 268-4308</a>
+            </p>
+            <picture>
+                <img src="../weatherAssets/images/preston-map.png" alt="Company logo and image">
+            </picture>
+        </div>
+        </div>
+        <section class="footer-bar">
+            Robert Trammel  &copy;WeatherAboveGround  <span id="today"></span>
+        </section>
+    </footer>
+    <script src="../weatherAssets/js/lazyload.js"></script>
+    <script src="../weatherAssets/js/weather-nav.js"></script>
+    <script src="../weatherAssets/js/weather-5day.js"></script>
+    <script src="../weatherAssets/js/weather-center.js"></script>
+</body>
+</html>

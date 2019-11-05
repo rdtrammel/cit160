@@ -254,3 +254,20 @@ figure{
     transition: box-shadow .2s ease-in-out;
 }
 
+
+/* Form */
+form label{ 
+    display:block; 
+    padding: .3rem;
+}
+
+form label input, form label select{
+    display: block;
+    padding: .8em;
+    max-width: 32em;
+}
+
+main form h1, main form h2{
+    padding:2% .2rem;
+    text-align:center;
+}

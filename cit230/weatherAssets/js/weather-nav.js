@@ -5,7 +5,7 @@ let sitePages = {
     "Preston" : "../lesson6/preston-6.html",
     "Soda Springs" : "#",
     "Fish Haven" : "#",
-    "Storm Center" : "#",
+    "Storm Center" : "../lesson8/weathercenter.html",
     "Gallery" : "../lesson7/gallery-7.html"
 };
 
