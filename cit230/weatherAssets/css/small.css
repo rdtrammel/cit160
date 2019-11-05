@@ -258,6 +258,7 @@ figure{
 /* Form */
 
 form fieldset {
+    display: block;
     margin: 2rem 0;
     border: 1px solid #777;
     border-radius: .5rem;
@@ -272,14 +273,25 @@ form legend {
 form label{ 
     display:block; 
     padding: .3rem;
+    width: 86%;
 }
 
 form label.top input, form label.top select{
+    -webkit-appearance:none;
+    appearance: none;
     display: block;
     font-size:18px;
     padding: .8em;
     width:100%;
     max-width: 20rem;
+}
+
+form label.top input:required{
+    border-left: red solid 4px;
+}
+
+form label.top input:required:value {
+    border-left: green solid 4px;
 }
 
 form input.submitBtn{
