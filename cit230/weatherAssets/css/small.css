@@ -281,7 +281,7 @@ form label.top input, form label.top select{
     appearance: none;
     display: block;
     font-size:18px;
-    padding: .8em;
+    padding: .5em;
     width:100%;
     max-width: 20rem;
 }

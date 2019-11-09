@@ -18,7 +18,7 @@ function setTopNavigation(){
         let buttonLink = sitePages[key];
         let regEx = new RegExp(buttonLink,'gi');
         if(location.pathname.match(regEx)){
-            navButtons += `<li class="active"><a href="#">${key}</a></li>\n`
+            navButtons += `<li class="active"><a href="${sitePages[key]}">${key}</a></li>\n`
         }else{
             navButtons += `<li><a href="${sitePages[key]}">${key}</a></li>\n`;
         }

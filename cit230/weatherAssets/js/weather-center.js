@@ -1,11 +1,6 @@
 setTopNavigation(); //Calls a script that will render the top site navigation
 setLazyLoad("[data-src]"); //setLazyLoad(selector)
 const stormDate = document.querySelector("[name=stormDate]");
-const severitySlider = document.querySelector("[type=slider]");
-
-severitySlider.addEventListener('change',()=>{
-    
-});
 
 let today = new Date();
 let day = `0${today.getDate()}`;
