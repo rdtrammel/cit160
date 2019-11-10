@@ -4,4 +4,8 @@
         grid-template-columns: repeat(2, 1fr);
     }
 
+    form input.submitBtn{
+        max-width: 22rem;
+    }
+
 }
