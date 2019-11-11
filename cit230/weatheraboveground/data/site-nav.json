@@ -1,8 +1,8 @@
 {
     "Home" : "#",
-    "Preston" : "../pages/preston-6.html",
+    "Preston" : "../pages/preston.html",
     "Soda Springs" : "#",
     "Fish Haven" : "#",
     "Storm Center" : "../pages/weathercenter.html",
-    "Gallery" : "../pages/gallery-7.html"
+    "Gallery" : "../pages/gallery.html"
 }
