@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>CIT 230 - Front-End Web Development - Weather Aboveground Gallery - Robert Trammel</title>
+    <meta name="description" content="Weather Gallery" >
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/small.css">
+    <link rel="stylesheet" href="../css/medium.css">
+    <link rel="stylesheet" href="../css/large.css">
+</head>
+<body>
+    <div id="promo-banner" class="hidden">
+        <h2>Saturday = Preston Pancakes in the Park!  9:00 a.m. Saturday at the city park pavilion.</h2>
+    </div>
+    <!-- Header Content -->
+    <header class="clearfix">
+        <picture>
+            <source srcset="../images/day.svg" type="image/svg">
+            <img rel="image/svg" src="../images/logo.svg" alt="weather logo">
+        </picture>
+        <div class="title">
+            <h1>Weather Above Ground</h1>
+            <h3>Where else would it happen</h3>
+        </div>
+    </header>
+
+    <!-- Top Navigation -->
+    <nav class="clearfix">
+        <button onclick="toggleMenu()">&#9776; Menu</button>
+        <ul id="site-nav" class="hide"><!-- Set with Javascript--></ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <form>
+            <h1>Weather Center</h1>
+            <h2>What's happening where you are?</h2>
+            <fieldset>
+                <legend>Tell us who you are</legend>
+                <label class="top">Full Name <input type="text" name="fullName" pattern="[A-Za-z ]{3,}" required /></label>
+                <label class="top">Email <input type="text" name="email" placeholder="your@email.com" /></label>
+                <label class="top">Phone <input type="tel" name="phoneNumber" required /></label>
+                <label class="top">Zip Code <input type="number" name="zipCode" required /></label>
+            </fieldset>
+            <fieldset>
+                <legend>Tell us what you see</legend>
+                <label class="top">Storm Date <input type="date" name="stormDate" /></label>
+                <label class="top">Storm Type <input list="stormTypes" name="stormType"></label>
+                <datalist id="stormTypes">
+                    <option value="Flash Flood"></option>
+                    <option value="Hail"></option>
+                    <option value="Hurricane"></option>
+                    <option value="Thunderstorm"></option>
+                    <option value="Tornado"></option>
+                </datalist>
+                <label class="top">Storm Severity
+                    <input type="range" name="slideRange" value="1" min="1" max="10" step="1"
+                        list="tickmarks" onchange="adjustSlider(this.value)">
+                    <span id="slidervalue">1</span>
+                    <datalist id="tickmarks">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </datalist>
+                </label>
+                <label class="top">Storm Region
+                    <select id="stormRegion">
+                        <option value="" disabled selected>&#9662; Select Region...</option>
+                        <option value="Preston">Preston</option>
+                        <option value="Sugar City">Sugar City</option>
+                        <option value="Fish Haven">Fish Haven</option>
+                    </select>
+                </label>
+            </fieldset>
+            <fieldset>
+                <legend>Are you in danger?</legend>
+                <label class="left"><input type="radio" name="dangerLevel" value="yes">Yes</label>
+                <label class="left"><input type="radio" name="dangerLevel" value="no">No</label>
+                <label class="left"><input type="radio" name="dangerLevel" value="maybe">Maybe</label>
+            </fieldset>
+            <input class="submitBtn" type="button" value="Report My Experience">
+        </form>
+    </main>
+    <!-- Footer -->
+    <footer>
+        <div class="contact-info">
+            <p>
+                Robert Trammel<br>
+                e: <a href="mailto:rd.trammel@gmail.com?subject=We think you're awesome"
+                    target="_blank">rd.trammel@gmail.com</a><br>
+                p: <a href="tel:12102684308" target="_blank">(210) 268-4308</a>
+            </p>
+            <picture>
+                <img src="../images/preston-map.png" alt="Company logo and image">
+            </picture>
+        </div>
+        </div>
+        <section class="footer-bar">
+            Robert Trammel  &copy;WeatherAboveGround  <span id="today"></span>
+        </section>
+    </footer>
+    <script src="../js/functions/lazyload.js"></script>
+    <script src="../js/functions/weather-nav.js"></script>
+    <script src="../js/functions/render5day.js"></script>
+    <script src="../js/weather-center.js"></script>
+</body>
+</html>

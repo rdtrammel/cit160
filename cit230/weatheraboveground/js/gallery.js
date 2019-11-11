@@ -1,0 +1,1 @@
+setLazyLoad("[data-src]"); //setLazyLoad(selector)

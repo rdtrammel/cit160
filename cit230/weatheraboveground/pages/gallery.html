@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>CIT 230 - Front-End Web Development - Weather Aboveground Gallery - Robert Trammel</title>
+    <meta name="description" content="Weather Gallery" >
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/small.css">
+    <link rel="stylesheet" href="../css/medium.css">
+    <link rel="stylesheet" href="../css/large.css">
+</head>
+<body>
+    <div id="promo-banner" class="hidden">
+        <h2>Saturday = Preston Pancakes in the Park!  9:00 a.m. Saturday at the city park pavilion.</h2>
+    </div>
+    <!-- Header Content -->
+    <header class="clearfix">
+        <picture>
+            <source srcset="../images/day.svg" type="image/svg">
+            <img rel="image/svg" src="../images/logo.svg" alt="weather logo">
+        <div class="title">
+            <h1>Weather Above Ground</h1>
+            <h3>Where else would it happen</h3>
+        </div>
+    </header>
+
+    <!-- Top Navigation -->
+    <nav class="clearfix">
+        <button onclick="toggleMenu()">&#9776; Menu</button>
+        <ul id="site-nav" class="hide"><!-- Set with Javascript--></ul>
+    </nav>
+
+    <!-- Gallery Content -->
+    <div class="gallery-content">
+        <figure>
+            <img src="../images/placeholder.png" data-src="../weatherAssets/images/preston-benchwinter-1200.jpg"/>
+            <figcaption>
+                Come inside and warm yourself by the fire.
+            </figcaption>
+        </figure>
+        <figure>
+            <img src="../images/placeholder.png" data-src="../weatherAssets/images/preston-hillfarm-1200.jpg"/>
+            <figcaption>
+                Our hills make your hills look like they were drawn with crayons.
+            </figcaption>
+        </figure>
+        <figure>
+            <img src="../images/placeholder.png" data-src="images/sad-girl-lake.jpg"/>
+            <figcaption>
+                When you have to poop, but the lake is all there is for miles. Boy Scouts.
+            </figcaption>
+        </figure>
+
+        <figure>
+            <img src="../images/placeholder.png" data-src="images/architecture-buildings-city.jpg"/>
+            <figcaption>
+                City above the clouds.
+            </figcaption>
+        </figure>
+
+        <figure>
+            <img src="../images/placeholder.png" data-src="images/atmosphere-clouds.jpg"/>
+            <figcaption>
+                We can see you from up here. Here is a photo of all of those collective farts in the wind you thought were so harmless. Did you think about that. No. You only think about yourself.
+            </figcaption>
+        </figure>
+
+        <figure>
+            <!--Photo by Johannes Plenio from Pexels-->
+            <img src="../images/placeholder.png" data-src="images/clouds-dawn-dramatic.jpg"/>
+            <figcaption>
+                The sun is always just on the other side of the storm.
+            </figcaption>
+        </figure>
+
+        <figure>
+            <!--Stock from Pixabay-->
+            <img src="../images/placeholder.png" data-src="images/black-and-white-clear-cool-459451.jpg"/>
+            <figcaption>
+                Rain on a rainy day
+            </figcaption>
+        </figure>
+
+        <figure>
+            <!--Photo by GEORGE DESIPRIS from Pexels -->
+            <img src="../images/placeholder.png" data-src="images/boat-clouds-cloudy-skies-753619.jpg"/>
+            <figcaption>
+                Mild rain with a chance of Tsunami!!!
+            </figcaption>
+        </figure>
+        
+        <figure>
+            <!--Photo by Skitterphoto from Pexels-->
+            <img src="../images/placeholder.png" data-src="images/blur-close-up-country-447440.jpg"/>
+            <figcaption>
+                If it's warm where you are, enjoy it.
+            </figcaption>
+        </figure>
+        
+    </div>
+    <!-- Footer -->
+    <footer>
+        <div class="contact-info">
+            <p>
+                Robert Trammel<br>
+                e: <a href="mailto:rd.trammel@gmail.com?subject=We think you're awesome"
+                    target="_blank">rd.trammel@gmail.com</a><br>
+                p: <a href="tel:12102684308" target="_blank">(210) 268-4308</a>
+            </p>
+            <picture>
+                <img src="../images/preston-map.png" alt="Company logo and image">
+            </picture>
+        </div>
+        </div>
+        <section class="footer-bar">
+            Robert Trammel  &copy;WeatherAboveGround  <span id="today"></span>
+        </section>
+    </footer>
+    <script src="../js/functions/lazyload.js"></script>
+    <script src="../js/functions/weather-nav.js"></script>
+    <script src="../js/functions/render5day.js"></script>
+    <script src="../js/gallery.js"></script>
+</body>
+</html>
