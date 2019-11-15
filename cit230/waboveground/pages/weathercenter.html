@@ -3,8 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-    <title>CIT 230 - Front-End Web Development - Weather Aboveground Gallery - Robert Trammel</title>
-    <meta name="description" content="Weather Gallery" >
+    <title>CIT 230 - Front-End Web Development - Weather Aboveground Storm Center Web Form - Robert Trammel</title>
+    <meta name="description" content="Storm Center Web Form">
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/small.css">
     <link rel="stylesheet" href="../css/medium.css">
@@ -16,16 +16,7 @@
         <h2>Saturday = Preston Pancakes in the Park!  9:00 a.m. Saturday at the city park pavilion.</h2>
     </div>
     <!-- Header Content -->
-    <header class="clearfix">
-        <picture>
-            <source srcset="../images/day.svg" type="image/svg">
-            <img rel="image/svg" src="../images/logo.svg" alt="weather logo">
-        </picture>
-        <div class="title">
-            <h1>Weather Above Ground</h1>
-            <h3>Where else would it happen</h3>
-        </div>
-    </header>
+    <header id="site-header" class="clearfix"></header>
 
     <!-- Top Navigation -->
     <nav class="clearfix">
@@ -111,7 +102,9 @@
     </footer>
     <script src="../js/functions/lazyload.js"></script>
     <script src="../js/functions/weather-nav.js"></script>
+    <script src="../js/functions/my-date-format.js"></script>
     <script src="../js/functions/render5day.js"></script>
+    <script src="../js/functions/load-site-header-footer.js"></script>
     <script src="../js/weather-center.js"></script>
 </body>
 </html>

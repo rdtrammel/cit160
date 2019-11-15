@@ -16,16 +16,7 @@
         <h2>Saturday = Preston Pancakes in the Park!  9:00 a.m. Saturday at the city park pavilion.</h2>
     </div>
     <!-- Header Content -->
-    <header class="clearfix">
-        <picture>
-            <source srcset="../images/day.svg" type="image/svg">
-            <img rel="image/svg" src="../images/logo.svg" alt="weather logo">
-        </picture>
-        <div class="title">
-            <h1>Weather Above Ground</h1>
-            <h3>Where else would it happen</h3>
-        </div>
-    </header>
+    <header id="site-header" class="clearfix"></header>
 
     <!-- Top Navigation -->
     <nav class="clearfix">
@@ -102,26 +93,13 @@
         
     </div>
     <!-- Footer -->
-    <footer>
-        <div class="contact-info">
-            <p>
-                Robert Trammel<br>
-                e: <a href="mailto:rd.trammel@gmail.com?subject=We think you're awesome"
-                    target="_blank">rd.trammel@gmail.com</a><br>
-                p: <a href="tel:12102684308" target="_blank">(210) 268-4308</a>
-            </p>
-            <picture>
-                <img src="../images/preston-map.png" alt="Company logo and image">
-            </picture>
-        </div>
-        </div>
-        <section class="footer-bar">
-            Robert Trammel  &copy;WeatherAboveGround  <span id="today"></span>
-        </section>
-    </footer>
+    <footer id="site-footer"></footer>
+
     <script src="../js/functions/lazyload.js"></script>
     <script src="../js/functions/weather-nav.js"></script>
     <script src="../js/functions/render5day.js"></script>
+    <script src="../js/functions/my-date-format.js"></script>
+    <script src="../js/functions/load-site-header-footer.js"></script>
     <script src="../js/gallery.js"></script>
 </body>
 </html>
