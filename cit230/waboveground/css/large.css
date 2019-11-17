@@ -78,4 +78,8 @@
         grid-template-columns: repeat(3, 1fr);
     }
 
+    #town-cards{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
 }
