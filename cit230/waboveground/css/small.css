@@ -314,3 +314,35 @@ main form h1, main form h2{
     padding:2% .2rem;
     text-align:center;
 }
+
+/* Main Page */
+#town-cards{
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: auto;
+}
+
+#town-cards div.card{
+    background-color: whitesmoke;
+    margin: .5em;
+}
+
+#town-cards div.card h2, 
+#town-cards div.card h4{
+    text-align:center;
+}
+
+#town-cards h4.motto{
+    margin:0;
+    padding:0;
+}
+
+#town-cards section.image{
+    overflow: none;
+}
+
+#town-cards section picture img{
+    height: 150px;
+    width:100%;
+    object-fit: cover;
+}

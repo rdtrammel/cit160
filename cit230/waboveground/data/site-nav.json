@@ -1,5 +1,5 @@
 {
-    "Home" : "#",
+    "Home" : "../pages/main.html",
     "Preston" : "../pages/preston.html",
     "Soda Springs" : "#",
     "Fish Haven" : "#",
