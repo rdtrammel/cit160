@@ -30,17 +30,11 @@
     </header>
     <nav class="clearfix">
         <button onclick="toggleMenu()">&#9776; Menu</button>
-        <ul id="site-nav" class="hide">
-            <!-- Set with Javascript-->
-        </ul>
+        <ul id="site-nav" class="hide"><!-- Set with Javascript--></ul>
     </nav>
     <main>
         <section class="hero-section">
             <h2 class="city-name">Preston Idaho</h2>
-            <article class="weather-summary">
-                <h2>Weather Summary</h2>
-                <div id="summary-data"><!-- Set with Javascript --></div>
-            </article>
             <div class="img-container">
                 <picture>
                     <source srcset="../images/cit230_image_franklin_500.jpg" media="(max-width:400px)" type="image/jpeg">
@@ -48,6 +42,10 @@
                     <img src="../images/cit230_image_franklin_1200.jpg" alt="Hero image of Preston Idaho">
                 </picture>
             </div>
+            <article class="weather-summary">
+                <h2>Weather Summary</h2>
+                <div id="summary-data"><!-- Set with Javascript --></div>
+            </article>
         </section>
         <section id="five-day-forecast"><!-- Set with Javascript --></section>
         <section class="editorial">
@@ -93,6 +91,7 @@
         </section>
     </footer>
     <script src="../js/functions/windchill.js"></script>
+    <script src="../js/functions/openWeather.js"></script>
     <script src="../js/functions/weather-nav.js"></script>
     <script src="../js/functions/render5day.js"></script>
     <script src="../js/preston.js"></script>

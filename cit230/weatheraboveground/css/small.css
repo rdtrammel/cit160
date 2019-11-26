@@ -114,17 +114,23 @@ main {
 }
 
 .weather-summary{
-    position: absolute;
+    margin:auto;
     background:linear-gradient(rgba(255,255,255,0.5), #fff);
-    padding: 1em;
-    left: 2rem;
-    top:5em;
     max-width: 15em;
+    line-height:1.5;
+}
+
+#summary-data {
+    padding:1em;
+    font-size:12pt;
+    display:block;
+    text-align:center;
 }
 
 #five-day-forecast{
     display:none;
     margin:2em auto;
+    grid-template-columns: repeat(5, 1fr);
 }
 
 .forecast-day{
@@ -133,14 +139,6 @@ main {
 
 .forecast-day img{
     width: 100%;
-}
-
-#summary-data {
-    padding:1em;
-    font-size:16pt;
-    line-height:1.5;
-    display:block;
-    text-align:center;
 }
 
 main .hero-section .weather-summary p{
