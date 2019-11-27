@@ -28,7 +28,9 @@ function renderWeatherData(obj){
                     </section>
                     <section class="image">
                         <picture>
-                            <img src="../images/${town.photo}" alt="Picture of ${town.name}">
+                            <source srcset="../images/${town.photo}_800.jpg" media="(min-width:600px) and (max-width:999px)">
+                            <source srcset="../images/${town.photo}_1200.jpg" media="(min-width:1000px)>
+                            <img src="../images/${town.photo}_500.jpg" alt="Picture of ${town.name}">
                         </picture>
                     </section>
                 </div>

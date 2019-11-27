@@ -37,9 +37,9 @@ function setSummary(data){
     let temp = data.main.temp.toFixed(1);
     summaryEl.innerHTML = `
         <h2>${data.weather[0].main}</h2>
-        Currently: <span class="summary-highlight">${temp} &#8457;</span><br>
-        High: <span class="summary-highlight">${data.main.temp_max} &#8457;</span><br>
-        Low: <span class="summary-highlight">${data.main.temp_min} &#8457;</span><br>
+        Currently: <span class="summary-highlight">${Number(temp).toFixed(0)} &#8457;</span><br>
+        High: <span class="summary-highlight">${Number(data.main.temp_max).toFixed(0)} &#8457;</span><br>
+        Low: <span class="summary-highlight">${Number(data.main.temp_min).toFixed(0)} &#8457;</span><br>
         Humidity: <span class="summary-highlight">${data.main.humidity}</span><br>
         Wind Chill: <span class="summary-highlight">${windChill(temp,data.wind.speed)}</span>
     `;
