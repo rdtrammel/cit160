@@ -1,7 +1,5 @@
-const urlEndpoint = "https://byui-cit230.github.io/weather";
-
 // Fetch Weather Site Data
-fetch(`${urlEndpoint}/data/towndata.json`)
+fetch(`../data/towndata.json`)
     .then(response=>{return response.json()})
     .then(json=>{
         renderWeatherData(json);
@@ -29,7 +27,7 @@ function renderWeatherData(obj){
                     <section class="image">
                         <picture>
                             <source srcset="../images/${town.photo}_800.jpg" media="(min-width:600px) and (max-width:999px)">
-                            <source srcset="../images/${town.photo}_1200.jpg" media="(min-width:1000px)>
+                            <source srcset="../images/${town.photo}_1200.jpg" media="(min-width:1000px)">
                             <img src="../images/${town.photo}_500.jpg" alt="Picture of ${town.name}">
                         </picture>
                     </section>
