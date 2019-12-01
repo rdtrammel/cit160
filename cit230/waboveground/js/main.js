@@ -1,5 +1,5 @@
 // Fetch Weather Site Data
-fetch(`../data/towndata.json`)
+fetch(`https://rdtrammel.github.io/cit230/waboveground/data/towndata.json`)
     .then(response=>{return response.json()})
     .then(json=>{
         renderWeatherData(json);
