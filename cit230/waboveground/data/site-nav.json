@@ -1,8 +1,8 @@
 {
-    "Home" : "../pages/main.html",
-    "Preston" : "../pages/preston.html",
-    "Soda Springs" : "../pages/soda-springs.html",
-    "Fish Haven" : "../pages/fish-haven.html",
-    "Storm Center" : "../pages/weathercenter.html",
-    "Gallery" : "../pages/gallery.html"
+    "Home" : "https://rdtrammel.github.io/cit230/waboveground/pages/main.html",
+    "Preston" : "https://rdtrammel.github.io/cit230/waboveground/pages/preston.html",
+    "Soda Springs" : "https://rdtrammel.github.io/cit230/waboveground/pages/soda-springs.html",
+    "Fish Haven" : "https://rdtrammel.github.io/cit230/waboveground/pages/fish-haven.html",
+    "Storm Center" : "https://rdtrammel.github.io/cit230/waboveground/pages/weathercenter.html",
+    "Gallery" : "https://rdtrammel.github.io/cit230/waboveground/pages/gallery.html"
 }

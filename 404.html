@@ -5,22 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <title>Error 404 - Page not found</title>
     <meta name="description" content="Weather Gallery" >
+    <link rel="stylesheet" href="https://rdtrammel.github.io/cit230/waboveground/css/normalize.css">
+    <link rel="stylesheet" href="https://rdtrammel.github.io/cit230/waboveground/css/small.css">
+    <link rel="stylesheet" href="https://rdtrammel.github.io/cit230/waboveground/css/medium.css">
+    <link rel="stylesheet" href="https://rdtrammel.github.io/cit230/waboveground/css/large.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
     <style>
-        body{
-            margin:0;
-            padding:0;
-        }
-        header h2{
-            padding: 1em;
-            text-align:center;
-            font-size:3em;
-        }
         main{
             padding: 5em;
         }
         figure {
             margin:auto;
             max-width:400px;
+        }
+        figcaption{
+            text-align: center;
+            font-size: 2em;
         }
         figure img{
             width:100%;
@@ -29,16 +29,33 @@
     <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
 </head>
 <body>
-    <header>
-        <h2>Error 404 - File not Found</h2>
-    </header>
+    <!-- Header Content -->
+    <header id="site-header" class="clearfix"></header>
+
+    <!-- Top Navigation -->
+    <nav class="clearfix">
+        <button onclick="toggleMenu()">&#9776; Menu</button>
+        <ul id="site-nav" class="hide"><!-- Set with Javascript--></ul>
+    </nav>
+
+    <!-- Main Content -->
     <main>
         <figure>
             <picture>
-                <img src="../cit230/assignmentAssets/images/404-rob-clean.svg" alt="Custom 404 logo">
+                <img src="https://rdtrammel.github.io/cit230/assignmentAssets/images/404-rob-clean.svg" alt="Custom 404 logo">
             </picture>
-            <figcaption>Sonofabitch</figcaption>
+            <figcaption>Error 404 - Page not Found</figcaption>
         </figure>
     </main>
+
+    <!-- Footer Content -->
+    <footer id="site-footer"></footer>
+    
+    <script src="https://rdtrammel.github.io/cit230/waboveground/js/functions/load-site-header-footer.js"></script>
+    <script src="https://rdtrammel.github.io/cit230/waboveground/js/functions/weather-nav.js"></script>
+    <script src="https://rdtrammel.github.io/cit230/waboveground/js/functions/lazyload.js"></script>
+    <script src="https://rdtrammel.github.io/cit230/waboveground/js/functions/my-date-format.js"></script>
+    <script src="https://rdtrammel.github.io/cit230/waboveground/js/main.js"></script>
+    
 </body>
 </html>

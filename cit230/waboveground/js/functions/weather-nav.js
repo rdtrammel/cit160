@@ -1,6 +1,6 @@
 //I did this so that if we need to add nav elements, I can just do it here and it will flow to other pages where nav is used.
 // { pageName : link }
-fetch('../data/site-nav.json')
+fetch('https://rdtrammel.github.io/cit230/waboveground/data/site-nav.json')
     .then(result=> result.json())
     .then(json=>setTopNavigation(json));
 
