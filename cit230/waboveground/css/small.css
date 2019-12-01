@@ -323,13 +323,20 @@ main form h1, main form h2{
 }
 
 #town-cards div.card{
+    text-align:center;
     background-color: whitesmoke;
+    padding:1em;
     margin: .5em;
 }
 
-#town-cards div.card h2, 
-#town-cards div.card h4{
+#town-cards div.card h2{
     text-align:center;
+    margin-bottom:1em;
+}
+
+#town-cards div.card h4{
+    margin-top:1em;
+    font-style: italic;
 }
 
 #town-cards h4.motto{
@@ -337,12 +344,18 @@ main form h1, main form h2{
     padding:0;
 }
 
-#town-cards section.image{
-    overflow: none;
-}
-
 #town-cards section picture img{
     height: 150px;
     width:100%;
     object-fit: cover;
+}
+
+.events{
+    border:1px solid black;
+    padding:1em;
+    margin-top:2em;
+}
+
+.events ul li{
+    text-align:left;
 }
