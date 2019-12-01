@@ -10,8 +10,8 @@ function setTopNavigation(data){
     let navButtons = new String();
     for (const key in data) { 
         let buttonLink = data[key];
-        let regEx = new RegExp(buttonLink,'gi');
-        if(location.pathname.match(regEx)){
+        let regEx = new RegExp(location.pathname,'gi');
+        if(buttonLink.match(regEx)){
             navButtons += `<li class="active"><a href="${data[key]}">${key}</a></li>\n`
         }else{
             navButtons += `<li><a href="${data[key]}">${key}</a></li>\n`;
