@@ -1,5 +1,5 @@
-const googleApiKey = "AIzaSyDwCypTybPNhPN_-PLhf9L7lPmiDOIjs2I";
-const openWeatherApiKey = "976da33f0dcc8a7e268ee63fe5d06018";
+const googleApiKey = `yourKeyHere`; //Get your own!
+const openWeatherApiKey = "976da33f0dcc8a7e268ee63fe5d06018"; //Get your own!
 
 function getWeather(location){ //This is the command that will get called by the individual module
     getCoordinates(location);
