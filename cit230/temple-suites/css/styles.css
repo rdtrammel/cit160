@@ -451,7 +451,9 @@ body {
   font-size: 16px;
 }
 
-header, ul, li {
+header,
+ul,
+li {
   margin: 0;
   padding: 0;
 }
@@ -466,7 +468,6 @@ header {
   color: #FFF;
   text-align: center;
   font-family: "Raleway", sans-serif;
-  transition: all 1s;
 }
 header .img-container {
   margin-top: .5em;
@@ -476,29 +477,38 @@ header .img-container img {
 }
 header button {
   display: block;
+  padding: 0 1em;
   border: 0;
   background: rgba(0, 0, 0, 0);
   font-size: 18pt;
   color: #FFF;
+  transition: all 1s;
 }
 header button:hover {
   background-color: rgba(135, 189, 223, 0.2);
   cursor: pointer;
 }
-
 header.scrolled {
-  background-color: white;
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.9);
+  width: 100%;
   grid-template-columns: 1fr 5fr .5fr;
   padding-left: 1em;
   text-align: left;
   color: #000;
   transition: all 1s;
 }
+header.scrolled button {
+  padding: 0 1em;
+  color: #000;
+}
 
 /* BEGIN Top Navigation */
 #top-nav {
-  margin: 0;
+  border: 1px solid pink;
+  margin: 0 auto;
   padding: 0;
+  width: 100%;
 }
 #top-nav ul {
   margin: 0;
@@ -510,7 +520,7 @@ header.scrolled {
   padding: 0;
 }
 #top-nav li a {
-  padding: .5em;
+  padding: 1em;
   display: block;
   text-align: center;
   text-decoration: none;
@@ -522,16 +532,30 @@ header.scrolled {
   background-color: rgba(135, 189, 223, 0.2);
   color: green;
 }
+#top-nav.scrolled {
+  padding-top: 150px;
+  display: block;
+}
 
 .hidden {
   display: none;
 }
 
-/* END header rules */
 /* START main rules */
 main {
   margin: auto;
   padding: 1em;
+}
+
+/*temporary use while developing footer*/
+.spacer {
+  height: 500px;
+}
+
+footer {
+  border-top: 2px solid #5899BA;
+  background-color: #87BDDF;
+  height: 500px;
 }
 
 /*----- Clearfix: Force an Element not to collapse -----*/

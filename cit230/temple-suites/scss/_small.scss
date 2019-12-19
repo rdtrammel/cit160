@@ -1,96 +1,140 @@
 /* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
-html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
 
 /*----------- apply a natural box layout model to all elements --------------*/
-* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
 
 /* START body rules */
 body {
-    font-family: $serifFamily;
-    font-size: 16px;
+  font-family: $serifFamily;
+  font-size: 16px;
 }
 
-header, ul, li{
-  margin:0;
-  padding:0;
+header,
+ul,
+li {
+  margin: 0;
+  padding: 0;
 }
+
 /* END body rules */
 
 /* START header rules */
-header{
-  background: $headerColor; 
+header {
+  background: $headerColor;
   padding: 0;
   border-bottom: 2px solid $accentColor;
-  display:grid;
+  display: grid;
   color: $headerTitleColor;
-  text-align:center;
+  text-align: center;
   font-family: $sansFamily;
-  .img-container{
+
+  .img-container {
     margin-top: .5em;
-    img{
-      height:50px;
+
+    img {
+      height: 50px;
     }
   }
-  button{
-    display:block;
+
+  button {
+    display: block;
+    padding: 0 1em;
     border: 0;
-    background: rgba(0,0,0,0);
+    background: rgba(0, 0, 0, 0);
     font-size: 18pt;
     color: $headerTitleColor;
-  }
-  button:hover{
-    background-color: $linkHoverColor;
-    cursor: pointer;
-  }
-  transition: all 1s;
-}
 
-header.scrolled{
-  background-color: white;
-  grid-template-columns: 1fr 5fr .5fr;
-  padding-left:1em;
-  text-align: left;
-  color: #000;
-  transition: all 1s;
+    &:hover {
+      background-color: $linkHoverColor;
+      cursor: pointer;
+    }
+
+    transition: all 1s;
+
+  }
+
+  &.scrolled {
+    position: fixed;
+    background-color: rgba(255, 255, 255, .9);
+    width: 100%;
+    grid-template-columns: 1fr 5fr .5fr;
+    padding-left: 1em;
+    text-align: left;
+    color: #000;
+    transition: all 1s;
+
+    button {
+      padding: 0 1em;
+      color: #000;
+    }
+  }
 }
 
 /* BEGIN Top Navigation */
-#top-nav{
-  margin:0;
-  padding:0;
-  ul{
-    margin:0;
-    padding:0;
+#top-nav {
+  border: 1px solid pink;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  ul {
+    margin: 0;
+    padding: 0;
     list-style-type: none;
   }
-  li{
-    margin:0;
-    padding:0;
-    a{
-      padding:.5em;
-      display:block;
+
+  li {
+    margin: 0;
+    padding: 0;
+
+    a {
+      padding: 1em;
+      display: block;
       text-align: center;
       text-decoration: none;
       color: black;
       font-size: 14pt;
-      &:hover{
+
+      &:hover {
         cursor: pointer;
         background-color: $linkHoverColor;
-        color:green;
+        color: green;
       }
     }
   }
+
+  &.scrolled {
+    padding-top:150px;
+    display:block;
+  }
 }
 
-.hidden{
-  display:none;
+.hidden {
+  display: none;
 }
-/* END header rules */
 
 /* START main rules */
-main{
+main {
   margin: auto;
   padding: 1em;
+}
+
+/*temporary use while developing footer*/
+.spacer {
+  height: 500px;
+}
+
+footer {
+  border-top: 2px solid $footerBorderColor;
+  background-color: $footerBackground;
+  height: 500px;
 }
 
 /*----- Clearfix: Force an Element not to collapse -----*/

@@ -1,15 +1,39 @@
 WebFont.load({ google: { families: [ 'Raleway: 300,400', 'Baskervville' ] } });
 
+const header = document.getElementById("top-header");
+const nav = document.getElementById("top-nav");
+const navBtns = document.querySelectorAll("#top-nav ul li a");
 const app = document.getElementById("app");
-const nav = document.querySelectorAll("#top-nav ul li a");
 
-nav.forEach(item=>{
-    item.addEventListener("click", ()=>{loadPage(item.getAttribute('data-href'));});
+// Attach routing capability to each Nav Item
+navBtns.forEach(btn=>{
+    btn.addEventListener("click", ()=>{loadPage(btn.getAttribute('data-href'));});
 });
 
 //default route on loading index is main.html
 let route = "pages/main.html";
 loadPage(route);
+
+//Header Scroll Behavior
+window.addEventListener("scroll", ()=>{
+    let y = this.scrollY;
+    if (y > 60){
+        header.addEventListener("click", returnToTop, true);
+        header.addEventListener("touchend", returnToTop, true);
+        header.classList.add("scrolled");
+        nav.classList.add("scrolled");
+    } else {
+        header.classList.remove("scrolled");
+        nav.classList.remove("scrolled");
+        header.removeEventListener("click", returnToTop, true);
+        header.removeEventListener("touchend", returnToTop, true);
+    }
+    console.log(nav.childNodes[0]);
+});
+
+function returnToTop(){
+    window.scroll({ top:0, behavior: "smooth" })
+}
 
 //Function used to load the page snippets into the main view
 function loadPage(route){

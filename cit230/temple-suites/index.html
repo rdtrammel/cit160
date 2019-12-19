@@ -12,7 +12,7 @@
     </head>
     <body>
         <!-- Static Header -->
-        <header>
+        <header id="top-header">
             <div class="img-container header-logo">
                 <!-- Icon used from: https://www.flaticon.com/authors/dinosoftlabs -->
                 <img src="img/house-80x80.png" alt="Temple Logo"/>
@@ -20,11 +20,12 @@
             <h2 class="header-title">Temple Inn and Suites</h2>
             <button onclick="toggleMenu()">&#x2630;</button>
         </header>
-        <nav id="top-nav">
-            <ul class="hidden">
+        <nav id="top-nav" class="scrolled">
+            <ul>
                 <li><a href="#main" data-href="pages/main.html" alt="link to main page">Main</a></li>
                 <li><a href="#second-page" data-href="pages/second.html" alt="link to second page">Second</a></li>
                 <li><a href="#third-page" data-href="pages/third.html" alt="link to third page">Third</a></li>
+                <li><a href="#contacts" data-href="pages/contact.html" alt="link to contacts page">Contacts</a></li>
             </ul>
         </nav>
 
