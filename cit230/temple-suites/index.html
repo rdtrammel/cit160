@@ -11,15 +11,31 @@
         
     </head>
     <body>
+        <!-- Static Header -->
         <header>
             <div class="img-container header-logo">
                 <!-- Icon used from: https://www.flaticon.com/authors/dinosoftlabs -->
                 <img src="img/house-80x80.png" alt="Temple Logo"/>
             </div>
             <h2 class="header-title">Temple Inn and Suites</h2>
+            <button onclick="toggleMenu()">&#x2630;</button>
         </header>
+        <nav id="top-nav">
+            <ul class="hidden">
+                <li><a href="#main" data-href="pages/main.html" alt="link to main page">Main</a></li>
+                <li><a href="#second-page" data-href="pages/second.html" alt="link to second page">Second</a></li>
+                <li><a href="#third-page" data-href="pages/third.html" alt="link to third page">Third</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main App Display -->
         <main id="app"></main>
-        <footer></footer>
+
+        <!-- Static Footer -->
+        <footer>
+            Some Footer Content
+        </footer>
+
         <script src="js/main.js"></script>
     </body>
 </html>

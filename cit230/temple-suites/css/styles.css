@@ -451,26 +451,89 @@ body {
   font-size: 16px;
 }
 
+header, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
 /* END body rules */
 /* START header rules */
 header {
-  display: grid;
-  background: linear-gradient(#87bddf, rgba(135, 189, 223, 0.7));
+  background: #BC5A49;
+  padding: 0;
   border-bottom: 2px solid #D06351;
-  padding: 0 1em;
-  grid-template-columns: 10% 50% 1fr;
+  display: grid;
+  color: #FFF;
+  text-align: center;
   font-family: "Raleway", sans-serif;
-  color: #404040;
+  transition: all 1s;
 }
 header .img-container {
   margin-top: .5em;
-  width: 50px;
 }
 header .img-container img {
-  width: 100%;
+  height: 50px;
+}
+header button {
+  display: block;
+  border: 0;
+  background: rgba(0, 0, 0, 0);
+  font-size: 18pt;
+  color: #FFF;
+}
+header button:hover {
+  background-color: rgba(135, 189, 223, 0.2);
+  cursor: pointer;
+}
+
+header.scrolled {
+  background-color: white;
+  grid-template-columns: 1fr 5fr .5fr;
+  padding-left: 1em;
+  text-align: left;
+  color: #000;
+  transition: all 1s;
+}
+
+/* BEGIN Top Navigation */
+#top-nav {
+  margin: 0;
+  padding: 0;
+}
+#top-nav ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+#top-nav li {
+  margin: 0;
+  padding: 0;
+}
+#top-nav li a {
+  padding: .5em;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  font-size: 14pt;
+}
+#top-nav li a:hover {
+  cursor: pointer;
+  background-color: rgba(135, 189, 223, 0.2);
+  color: green;
+}
+
+.hidden {
+  display: none;
 }
 
 /* END header rules */
+/* START main rules */
+main {
+  margin: auto;
+  padding: 1em;
+}
+
 /*----- Clearfix: Force an Element not to collapse -----*/
 .clearfix:after {
   content: "";
@@ -478,9 +541,8 @@ header .img-container img {
   clear: both;
 }
 
-@media only screen and (min-width: 1028px) {
-  header, nav, main, footer {
-    max-width: 1200px;
-    margin: auto;
+@media only screen and (min-width: 560px) {
+  #top-nav button {
+    display: hidden;
   }
 }
