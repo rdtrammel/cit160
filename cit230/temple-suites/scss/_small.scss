@@ -134,6 +134,9 @@ footer {
   border-top: 2px solid $footerBorderColor;
   background-color: $footerBackground;
   height: 500px;
+  .signature-line{
+    text-align: center;
+  }
 }
 
 /*----- Clearfix: Force an Element not to collapse -----*/
