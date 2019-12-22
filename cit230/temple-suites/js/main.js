@@ -2,7 +2,7 @@ WebFont.load({ google: { families: [ 'Raleway: 300,400', 'Baskervville' ] } });
 
 const header = document.getElementById("top-header");
 const nav = document.getElementById("top-nav");
-const navBtns = document.querySelectorAll("#top-nav ul li a");
+const navBtns = nav.querySelectorAll("a");
 const app = document.getElementById("app");
 
 // Attach routing capability to each Nav Item
@@ -45,4 +45,8 @@ function loadPage(route){
 //Function used to toggle the Navigation Menu in smaller views. Default is hidden
 function toggleMenu(){
     document.querySelector("#top-nav ul").classList.toggle("hidden");
+}
+
+function initBooking(){
+    console.log("Callout to form modal");
 }

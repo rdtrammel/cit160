@@ -36,6 +36,11 @@ header {
   text-align: center;
   font-family: $sansFamily;
 
+  h2{
+    padding:.5em;
+    font-size: 14pt;
+  }
+
   .img-container {
     margin-top: .5em;
 
@@ -122,7 +127,22 @@ header {
 /* START main rules */
 main {
   margin: auto;
-  padding: 1em;
+  max-width: 1200px;
+  #main-banner{
+    overflow:hidden;
+    text-align:center;
+    picture{
+      width:100%;
+      margin: auto;
+    }
+  }
+}
+
+button.btn-accent{
+  background-color: #FFF;
+  border: 2px solid $accentColor;
+  border-radius: .1em;
+  color: $accentColor;
 }
 
 /*temporary use while developing footer*/
