@@ -7,7 +7,7 @@ const app = document.getElementById("app");
 
 // Attach routing capability to each Nav Item
 navBtns.forEach(btn=>{
-    btn.addEventListener("click", ()=>{loadPage(btn.getAttribute('data-href'));});
+    btn.addEventListener("click", ()=>{toggleMenu();loadPage(btn.getAttribute('data-href'));});
 });
 
 //default route on loading index is main.html

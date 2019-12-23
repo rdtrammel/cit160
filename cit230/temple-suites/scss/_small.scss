@@ -138,11 +138,19 @@ main {
   }
 }
 
-button.btn-accent{
-  background-color: #FFF;
-  border: 2px solid $accentColor;
-  border-radius: .1em;
-  color: $accentColor;
+button{
+  &.btn-accent{
+    background-color: #FFF;
+    padding: 1em;
+    border: 2px solid $accentColor;
+    border-radius: .1em;
+    color: $accentColor;
+    &:hover{
+      background-color: $accentColor;
+      color: #FFF;
+      cursor: pointer;
+    }
+  }
 }
 
 /*temporary use while developing footer*/
