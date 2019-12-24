@@ -44,7 +44,7 @@ function loadPage(route){
 
 //Function used to toggle the Navigation Menu in smaller views. Default is hidden
 function toggleMenu(){
-    document.querySelector("#top-nav ul").classList.toggle("hidden");
+    document.querySelector("#top-nav ul").classList.toggle("hide");
 }
 
 function initBooking(){

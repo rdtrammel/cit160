@@ -1,0 +1,28 @@
+header{
+    button{
+        display: none;
+    }
+}
+
+#top-nav {
+    ul{
+        max-width: 100;
+        margin: 0 auto;
+        grid-template-columns: repeat(4, 1fr);
+        border: 1px solid pink;
+        &.hide{
+            display: grid;
+        }
+        li {
+            a{
+                border:none;
+                border-right: 1px solid rgba(0,0,0,0.3);
+                border-bottom: 1px solid rgba(0,0,0,0.3);
+                padding: .6rem 1rem;
+                &:first-child{
+                    border-left: 1px solid rgba(0,0,0,0.3);
+                }
+            }
+        }
+    }
+}
