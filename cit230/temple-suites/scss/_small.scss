@@ -51,19 +51,18 @@ header {
 
   button {
     display: block;
-    padding: 0 1em;
+    margin: auto;
+    padding: 0 .5em;
     border: 0;
     background: rgba(0, 0, 0, 0);
-    font-size: 18pt;
+    font-size: 16pt;
     color: $headerTitleColor;
-
+  
     &:hover {
       background-color: $linkHoverColor;
       cursor: pointer;
     }
-
-    transition: all 1s;
-
+    transition: all .2s;
   }
 
   &.scrolled {
