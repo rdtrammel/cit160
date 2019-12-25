@@ -28,7 +28,6 @@ window.addEventListener("scroll", ()=>{
         header.removeEventListener("click", returnToTop, true);
         header.removeEventListener("touchend", returnToTop, true);
     }
-    console.log(nav.childNodes[0]);
 });
 
 function returnToTop(){
